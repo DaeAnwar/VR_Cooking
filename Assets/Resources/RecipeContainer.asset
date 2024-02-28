@@ -1,0 +1,1329 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c7b4cf20c542e4db37bee9dc0fada8, type: 3}
+  m_Name: RecipeContainer
+  m_EditorClassIdentifier: 
+  recipes:
+  - id: ce327a1e-0d55-4cb2-8f69-a2d977b79bc3
+    name: Keto Corn Dog Bites
+    tags:
+    - chicken-free
+    - dairy-free
+    - fish-free
+    - gluten-free
+    - keto
+    - kid-friendly
+    - lchf
+    - meal-plan-ok
+    - peanut-free
+    - pork-free
+    - relevant-meal--snacks
+    - shellfish-free
+    - snacks
+    - wheat-free
+    description: "Looking for keto sides and snacks to add to your summer barbecues
+      or meal plans? Corn dog bites are perfect for adults and kiddos! Despite the
+      batter being non-traditional, you really can\u2019t tell the difference in
+      taste. They taste even better dipped in your favorite hot dog condiments!\n\nJessica
+      L."
+    prepareTime: 17
+    cookTime: 28
+    ingredients:
+    - name: Raw Egg
+      servingSize:
+        units: large
+        desc: 4 large
+        qty: 4
+        grams: 200
+        scale: 4
+    - name: Almond Flour
+      servingSize:
+        units: cup
+        desc: 1 cup
+        qty: 1
+        grams: 112
+        scale: 1
+    - name: Almond Milk, Plain Or Original, Unsweetened
+      servingSize:
+        units: cup
+        desc: "\xBD cup"
+        qty: 0.5
+        grams: 120
+        scale: 0.5
+    - name: Salt
+      servingSize:
+        units: teaspoon
+        desc: "\xBC teaspoon"
+        qty: 0.25
+        grams: 2
+        scale: 0.25
+    - name: Hot Dog, Beef (Kosher), Plain
+      servingSize:
+        units: regular - 10 per pound
+        desc: 3 regular - 10 per pound
+        qty: 3
+        grams: 135
+        scale: 4.762
+    steps:
+    - Preheat an oven to 350 degrees. Separate HALF your total eggs. Set the egg
+      whites into a stand mixer with a whip attachment and set the egg yolks aside
+      for later. Whip the egg white to stiff peaks and set them aside in a small
+      bowl.
+    - Wipe your mixing bowl clean. Place in the egg yolks set aside earlier and whip
+      them until they thicken and become a light, opaque yellow (this can take up
+      to 5 minutes). Then, whip in the almond flour until you have a crumbly paste.
+    - Whip into the mixing bowl your remaining whole eggs, almond milk, and salt.
+      Once fully mixed, remove your bowl from your stand mixer. Use a spatula or
+      hand whisk to gently fold in the stiff egg whites you set aside earlier.
+    - Line a 12-count muffin tin with cupcake liners. Remove the rounded ends of
+      your hot dogs. Slice each hot dog into 4 pieces (one piece for each muffin
+      tin). Place each piece of hot dog standing up in the center of each muffin
+      tin.
+    - "Use a spoon or scoop to transfer the liquid batter over each hot dog, filling
+      each cupcake liner about \xBE full."
+    - Bake the corn dog bites for 25-28 minutes, until you seen golden brown tops.
+      Enjoy with your favorite mustard or a squirt of ketchup!
+    servings: 6
+    servingSizes:
+    - units: 2 corn dog bites
+      desc: 
+      qty: 1
+      grams: 74
+      scale: 1
+    nutrients:
+      caloriesKCal: 232.535
+      totalCarbs: 4.809
+      diabetesCarbs: 2.755
+      sugar: 1.46
+      protein: 10.835
+      fat: 19.47
+      potassium: 273.321
+      magnesium: 56.388
+      calcium: 105.155
+      iron: 1.355
+      zinc: 1.372
+      copper: 0.208
+      phosphorus: 177.449
+      sodium: 350.392
+      selenium: 13.284
+      folate: 23.416
+      choline: 114.639
+      alcohol: 0
+      caffeine: 0
+      gluten: 0
+      manganese: 0.388
+    image: https://tinyurl.com/2p82zzca/ce327a1e-0d55-4cb2-8f69-a2d977b79bc3.png
+  - id: a2892760-d225-4e4c-b3f3-288e30035e6d
+    name: Keto Bacon Wrapped Chicken Tenders with Parmesan
+    tags:
+    - beef-free
+    - fish-free
+    - gluten-free
+    - keto
+    - lchf
+    - peanut-free
+    - relevant-meal--lunch
+    - shellfish-free
+    - soy-free
+    - tree-nut-free
+    - wheat-free
+    description: "These keto chicken tenders are wrapped with bacon and a garlic
+      parmesan mayonnaise, then baked until tender and golden. \n\nThese make a great
+      lunch option served with a side salad or steamed green vegetables."
+    prepareTime: 8
+    cookTime: 22
+    ingredients:
+    - name: Chicken Tender, Raw
+      servingSize:
+        units: tender
+        desc: 4 tender
+        qty: 4
+        grams: 0
+        scale: 4
+    - name: Bacon
+      servingSize:
+        units: slice - 6" long
+        desc: 4 slice - 6" long
+        qty: 4
+        grams: 32
+        scale: 1.129
+    - name: Mayonnaise, Store Bought
+      servingSize:
+        units: tablespoon
+        desc: 1 tablespoon
+        qty: 1
+        grams: 14
+        scale: 1
+    - name: Parmesan Cheese
+      servingSize:
+        units: tablespoon, grated
+        desc: 1 tablespoon, grated
+        qty: 1
+        grams: 7
+        scale: 0.249
+    - name: Garlic Powder
+      servingSize:
+        units: teaspoon
+        desc: "\xBD teaspoon"
+        qty: 0.5
+        grams: 2
+        scale: 0.5
+    - name: Salt, Sea Salt
+      servingSize:
+        units: teaspoon
+        desc: "\xBC teaspoon"
+        qty: 0.25
+        grams: 2
+        scale: 0.25
+    - name: Black Pepper
+      servingSize:
+        units: teaspoon
+        desc: "\u215B teaspoon"
+        qty: 0.125
+        grams: 0
+        scale: 0.125
+    steps:
+    - Preheat the oven to 400 degrees Fahrenheit and line a shallow oven tray with
+      baking paper.
+    - Add a heaped tablespoon of mayonnaise to a mixing bowl along with the parmesan,
+      garlic powder, salt and pepper. Stir together well to combine. Spoon half of
+      the mayonnaise mixture into a small serving dish and reserve to one side.
+    - Arrange the bacon across a clean work surface or chopping board. Spread the
+      remaining mayonnaise mixture over each slice of bacon, coating each strip in
+      a generous layer of the mixture.
+    - 'Wrap each chicken tender tightly with a strip of mayo covered bacon. '
+    - Arrange the chicken across the lined oven tray and bake for 18-22 minutes or
+      until completely cooked through and the bacon is golden.
+    - 'Serve with the reserved mayonnaise for dipping. '
+    servings: 2
+    servingSizes:
+    - units: servings
+      desc: 
+      qty: 1
+      grams: 114.817
+      scale: 1
+    nutrients:
+      caloriesKCal: 255.508
+      totalCarbs: 1.105
+      diabetesCarbs: 0.993
+      sugar: 0.233
+      protein: 27.904
+      fat: 14.683
+      potassium: 96.016
+      magnesium: 7.518
+      calcium: 46.063
+      iron: 0.256
+      zinc: 0.623
+      copper: 0.026
+      phosphorus: 91.604
+      sodium: 654.471
+      selenium: 9.265
+      folate: 0.996
+      choline: 17.777
+      alcohol: 0
+      caffeine: 0
+      gluten: 0
+      manganese: 0.031
+    image: https://tinyurl.com/2p82zzca/a2892760-d225-4e4c-b3f3-288e30035e6d.png
+  - id: 133fcdec-4595-44be-a302-02df4c209451
+    name: Keto Sesame Tuna and Egg Salad
+    tags:
+    - beef-free
+    - chicken-free
+    - dairy-free
+    - gluten-free
+    - keto
+    - lchf
+    - peanut-free
+    - pescatarian
+    - pork-free
+    - relevant-meal--salads
+    - salads
+    - shellfish-free
+    - soy-free
+    - tree-nut-free
+    - wheat-free
+    description: 'This quick and easy tuna and egg salad is combined with aromatic
+      scallions and parsley and coated in a sesame, lemon mayo.
+
+
+      This is a
+      great option for stuffing lettuce wraps or topping low carb crackers.'
+    prepareTime: 8
+    cookTime: 0
+    ingredients:
+    - name: Hard Boiled Egg
+      servingSize:
+        units: medium
+        desc: 2 medium
+        qty: 2
+        grams: 88
+        scale: 1.76
+    - name: Scallions
+      servingSize:
+        units: medium - 4 1/8" long
+        desc: 2 medium - 4 1/8" long
+        qty: 2
+        grams: 30
+        scale: 0.3
+    - name: Canned Tuna
+      servingSize:
+        units: ounce
+        desc: "1-\xBE ounce"
+        qty: 1.75
+        grams: 50
+        scale: 1.75
+    - name: Lemon Juice, Fresh
+      servingSize:
+        units: teaspoon
+        desc: 1 teaspoon
+        qty: 1
+        grams: 5
+        scale: 1
+    - name: Parsley, Fresh
+      servingSize:
+        units: tablespoon
+        desc: 1 tablespoon
+        qty: 1
+        grams: 4
+        scale: 1
+    - name: Sesame Oil
+      servingSize:
+        units: teaspoon
+        desc: 1 teaspoon
+        qty: 1
+        grams: 5
+        scale: 0.333
+    - name: Mayonnaise
+      servingSize:
+        units: tablespoon
+        desc: 1 tablespoon
+        qty: 1
+        grams: 14
+        scale: 1
+    - name: Sesame Seeds, Hulled, Toasted, Unsalted
+      servingSize:
+        units: teaspoon, whole pieces
+        desc: 1 teaspoon, whole pieces
+        qty: 1
+        grams: 3
+        scale: 0.021
+    - name: Salt, Sea Salt
+      servingSize:
+        units: teaspoon
+        desc: "\u215B teaspoon"
+        qty: 0.125
+        grams: 0
+        scale: 0.125
+    - name: Black Pepper
+      servingSize:
+        units: teaspoon
+        desc: "\u215B teaspoon"
+        qty: 0.125
+        grams: 0
+        scale: 0.125
+    steps:
+    - Peel and roughly chop the eggs and add to a mixing bowl.
+    - Thinly slice the scallions and roughly chop the parsley. Add to the mixing
+      bowl along with the tuna and stir well to combine.
+    - Add the mayonnaise to a mixing bowl with the lemon juice, sesame oil, salt
+      and pepper. Whisk together until smooth.
+    - Spoon the dressing over the salad and stir well to coat.
+    - Sprinkle over the sesame seeds to serve.
+    servings: 2
+    servingSizes:
+    - units: servings
+      desc: 
+      qty: 1
+      grams: 109.148
+      scale: 1
+    nutrients:
+      caloriesKCal: 170.313
+      totalCarbs: 2.366
+      diabetesCarbs: 1.629
+      sugar: 1.166
+      protein: 11.004
+      fat: 13.018
+      potassium: 162.947
+      magnesium: 19.157
+      calcium: 43.024
+      iron: 1.401
+      zinc: 0.866
+      copper: 0.057
+      phosphorus: 128.993
+      sodium: 309.649
+      selenium: 31.783
+      folate: 34.959
+      choline: 140.478
+      alcohol: 0
+      caffeine: 0
+      gluten: 0
+      manganese: 0.082
+    image: https://tinyurl.com/2p82zzca/133fcdec-4595-44be-a302-02df4c209451.png
+  - id: ccef957b-351f-4c14-b33c-ef050045b877
+    name: Keto Vanilla Butter Latte
+    tags:
+    - beef-free
+    - beverages
+    - breakfast
+    - chicken-free
+    - egg-free
+    - fish-free
+    - gluten-free
+    - keto
+    - lchf
+    - peanut-free
+    - pork-free
+    - quick-easy
+    - relevant-meal--beverages
+    - shellfish-free
+    - soy-free
+    - vegetarian
+    - wheat-free
+    description: "This creamy Keto vanilla BULLETPROOF\xAE coffee recipe is rich
+      in fats, frothy plant-based milk, and a hint of sweet vanilla. This Keto vanilla
+      butter coffee makes a great fat-fueled breakfast option to kickstart your day.
+      Alternatively, this is perfect served with a slice of low-carb cake as an afternoon
+      treat!\n\n### What ingredients are in this Keto vanilla butter latte?\n\nThis
+      Keto vanilla BULLETPROOF\xAE coffee is prepared with hot almond milk infused
+      with sweet vanilla extract. The milk is then blended with instant coffee and
+      a hearty helping of unsalted butter, before being blitzed until super frothy!
+      We have used a handheld stick blender to froth and blend our Keto coffee, however,
+      you may use a freestanding blender for this if preferred.\n\n### Here are some
+      tips to make Keto vanilla butter coffee?\n\nThis Keto BULLETPROOF\xAE coffee
+      provides a generous serving of fats from unsalted butter. If preferred you
+      may swap the butter for coconut oil or BULLETPROOF\xAE brain octane oil (MCT
+      Oil) or even a blend of fats. You may also swap the erythritol for your preference
+      in low-carb sweetener or omit it entirely if desired. Please be sure to adjust
+      your macros for any changes made.\n\n### Can you use freshly brewed coffee
+      in this Keto recipe?\n\nWhile this recipe calls for instant coffee, you can
+      definitely substitute it for espresso or freshly brewed coffee, just make sure
+      its strong.\n\nBULLETPROOF\xAE is a registered trademark owned by Bulletproof
+      Digital, Inc."
+    prepareTime: 8
+    cookTime: 3
+    ingredients:
+    - name: Butter, Unsalted
+      servingSize:
+        units: tablespoon
+        desc: "1-\xBD tablespoon"
+        qty: 1.5
+        grams: 21
+        scale: 1.5
+    - name: Almond Milk, Vanilla Or Other Flavors, Unsweetened
+      servingSize:
+        units: cup
+        desc: "1-\xBD cup"
+        qty: 1.5
+        grams: 360
+        scale: 1.5
+    - name: Instant Coffee
+      servingSize:
+        units: teaspoon
+        desc: 1 teaspoon
+        qty: 1
+        grams: 5
+        scale: 0.167
+    - name: Vanilla Extract
+      servingSize:
+        units: teaspoon
+        desc: "\xBC teaspoon"
+        qty: 0.25
+        grams: 0
+        scale: 0.25
+    - name: 100% Pure Erythritol by Now
+      servingSize:
+        units: tsp
+        desc: 1 tsp
+        qty: 1
+        grams: 4
+        scale: 1
+    steps:
+    - Add the almond milk and vanilla extract to a small saucepan over low/medium
+      heat. Stir to combine. Heat the milk through until piping hot but not boiling.
+    - Add the instant coffee to a large mug. Add the granulated sweetener. Add the
+      hot milk and stir well to combine, dissolving the coffee and sweetener.
+    - Add the butter to the mug. Stir well to combine. Let the butter completely
+      melt into the milky coffee.
+    - Carefully use a hand held stick blender or milk frother and blend the coffee
+      and butter. Continue blending until you have a thick frothy layer on the top
+      of your coffee. Serve hot.
+    servings: 1
+    servingSizes:
+    - units: mug
+      desc: 
+      qty: 1
+      grams: 210
+      scale: 1
+    nutrients:
+      caloriesKCal: 203.555
+      totalCarbs: 5.903
+      diabetesCarbs: 2.943
+      sugar: 0.572
+      protein: 1.779
+      fat: 21.015
+      potassium: 249.173
+      magnesium: 24.769
+      calcium: 680.445
+      iron: 1.086
+      zinc: 0.257
+      copper: 0.083
+      phosphorus: 41.516
+      sodium: 257.662
+      selenium: 0.527
+      folate: 3.945
+      choline: 7.966
+      alcohol: 0.631
+      caffeine: 1.571
+      gluten: 0
+      manganese: 0.124
+    image: https://tinyurl.com/2p82zzca/ccef957b-351f-4c14-b33c-ef050045b877.png
+  - id: b0e43118-46a5-4188-b658-46686c992f62
+    name: "Low Carb Baked Eggs With Leeks And Cr\xE8me Fraiche"
+    tags:
+    - beef-free
+    - chicken-free
+    - fish-free
+    - gluten-free
+    - lchf
+    - peanut-free
+    - pork-free
+    - relevant-meal--lunch
+    - shellfish-free
+    - soy-free
+    - tree-nut-free
+    - vegetarian
+    - wheat-free
+    description: 'These rich and creamy eggs are accompanied by buttery leeks and
+      baked until set.
+
+
+      This is a great dish for lunch alongside a simple
+      green salad or steamed green veggies.'
+    prepareTime: 10
+    cookTime: 24
+    ingredients:
+    - name: Raw Egg Whole
+      servingSize:
+        units: medium
+        desc: 2 medium
+        qty: 2
+        grams: 88
+        scale: 0.362
+    - name: Creme Fraiche
+      servingSize:
+        units: tablespoon
+        desc: 2 tablespoon
+        qty: 2
+        grams: 28.75
+        scale: 2
+    - name: Leeks, Raw
+      servingSize:
+        units: cup, cut pieces
+        desc: "\xBE cup, cut pieces"
+        qty: 0.75
+        grams: 66.755
+        scale: 0.75
+    - name: Unsalted Butter
+      servingSize:
+        units: tablespoon
+        desc: "\xBE tablespoon"
+        qty: 0.75
+        grams: 10.641
+        scale: 0.75
+    - name: Cheddar Cheese
+      servingSize:
+        units: cup, grated
+        desc: "\xBD cup, grated"
+        qty: 0.5
+        grams: 56.501
+        scale: 1.993
+    - name: Salt, Sea Salt
+      servingSize:
+        units: teaspoon
+        desc: "\xBC teaspoon"
+        qty: 0.25
+        grams: 1.5
+        scale: 0.25
+    - name: Black Pepper
+      servingSize:
+        units: teaspoon
+        desc: "\u215B teaspoon"
+        qty: 0.125
+        grams: 0.287
+        scale: 0.125
+    steps:
+    - Preheat the oven to 320 degrees Fahrenheit and boil a kettle of water.
+    - "Lightly butter 2 large ramekins. Heat the remaining butter in a saucepan over
+      a low/medium heat. Finely slice the leeks and add to the pan. Saut\xE9 in the
+      butter for 3-4 minutes until tender."
+    - Divide the leeks between the two ramekins.
+    - Crack one egg on top of each and season with salt and pepper.
+    - Sprinkle over the cheese.
+    - "Spoon over the cr\xE8me fraiche."
+    - Arrange the ramekins in a deep oven tray and half fill the tray with the boiling
+      water.
+    - Transfer to the oven for 15-20 minutes until the eggs are cooked to preference.
+    servings: 2
+    servingSizes:
+    - units: servings
+      desc: 
+      qty: 1
+      grams: 146.003
+      scale: 1
+    nutrients:
+      caloriesKCal: 286.551
+      totalCarbs: 6.424
+      diabetesCarbs: 5.729
+      sugar: 2.2
+      protein: 12.966
+      fat: 23.39
+      potassium: 157.349
+      magnesium: 23.678
+      calcium: 255.656
+      iron: 1.576
+      zinc: 1.598
+      copper: 0.098
+      phosphorus: 234.101
+      sodium: 549.518
+      selenium: 22.825
+      folate: 50.426
+      choline: 11.264
+      alcohol: 0
+      caffeine: 0
+      gluten: 0
+      manganese: 0.188
+    image: https://tinyurl.com/2p82zzca/b0e43118-46a5-4188-b658-46686c992f62.png
+  - id: a307de58-6c58-4c24-b245-02e5450a186b
+    name: Keto Chorizo, Spinach and Bell Pepper Zucchini Boats
+    tags:
+    - beef-free
+    - chicken-free
+    - dairy-free
+    - egg-free
+    - fish-free
+    - gluten-free
+    - keto
+    - lchf
+    - peanut-free
+    - relevant-meal--lunch
+    - shellfish-free
+    - soy-free
+    - tree-nut-free
+    - wheat-free
+    description: 'These flavorsome zucchini boats are loaded with smokey chorizo,
+      tender baby spinach and sweet red bell pepper.
+
+
+      These are a great lunch
+      option served with an avocado salad.'
+    prepareTime: 7
+    cookTime: 15
+    ingredients:
+    - name: Fresh Food Spanish Chorizo by Sainsbury's
+      servingSize:
+        units: ounce
+        desc: "1-\xBE ounce"
+        qty: 1.75
+        grams: 50
+        scale: 0.496
+    - name: Baby Spinach
+      servingSize:
+        units: cup
+        desc: 1 cup
+        qty: 1
+        grams: 30
+        scale: 1
+    - name: White Onion
+      servingSize:
+        units: tablespoon
+        desc: 1 tablespoon
+        qty: 1
+        grams: 12
+        scale: 0.076
+    - name: Zucchini
+      servingSize:
+        units: medium
+        desc: 1 medium
+        qty: 1
+        grams: 167
+        scale: 0.928
+    - name: Olive Oil
+      servingSize:
+        units: tablespoon
+        desc: "\xBD tablespoon"
+        qty: 0.5
+        grams: 7
+        scale: 0.5
+    - name: Red Bell Peppers, Raw
+      servingSize:
+        units: large - 3" diameter x 3 3/4"
+        desc: "\xBC large - 3\" diameter x 3 3/4\""
+        qty: 0.25
+        grams: 41
+        scale: 0.275
+    - name: Salt, Sea Salt
+      servingSize:
+        units: teaspoon
+        desc: "\xBC teaspoon"
+        qty: 0.25
+        grams: 2
+        scale: 0.25
+    - name: Black Pepper, Ground
+      servingSize:
+        units: teaspoon
+        desc: "\u215B teaspoon"
+        qty: 0.125
+        grams: 0
+        scale: 0.125
+    steps:
+    - Slice the top and bottom from the zucchini and discard. Cut the zucchini in
+      half lengthwise. Heat a griddle pan over a high heat. Add the zucchini halves
+      cut side down and griddle for 3-4 minutes each side or until cooked through
+      and char lines appear. Keep warm until ready to serve.
+    - Heat the oil in a skillet over a medium heat. Roughly chop the chorizo and
+      dice the bell pepper. Add to the pan along with the onion, cooking for 4-5
+      minutes until tender or until the chorizo is cooked through and golden brown.
+    - Add the spinach to the skillet and stir through until just wilted.
+    - Divide the chorizo mixture between the two zucchini boats to serve.
+    servings: 2
+    servingSizes:
+    - units: servings
+      desc: 
+      qty: 1
+      grams: 104.895
+      scale: 1
+    nutrients:
+      caloriesKCal: 135.571
+      totalCarbs: 5.43
+      diabetesCarbs: 3.675
+      sugar: 3.081
+      protein: 7.123
+      fat: 10.008
+      potassium: 358.196
+      magnesium: 31.095
+      calcium: 34.048
+      iron: 0.849
+      zinc: 0.418
+      copper: 0.071
+      phosphorus: 45.561
+      sodium: 655.071
+      selenium: 0.375
+      folate: 63.087
+      choline: 12.289
+      alcohol: 0
+      caffeine: 0
+      gluten: 0
+      manganese: 0.328
+    image: https://tinyurl.com/2p82zzca/a307de58-6c58-4c24-b245-02e5450a186b.png
+  - id: 348b12ac-3cf3-44a7-b193-4c686a07c0f2
+    name: Keto Bird Nests
+    tags:
+    - beef-free
+    - dairy-free
+    - fish-free
+    - gluten-free
+    - keto
+    - lchf
+    - peanut-free
+    - pork-free
+    - relevant-meal--breakfast
+    - shellfish-free
+    - soy-free
+    - tree-nut-free
+    - vegetarian
+    - wheat-free
+    description: 'This deliciously low-carb breakfast is light to eat and totally
+      instagram-worthy! Spiralized zucchini noodles are gently seasoned and are each
+      a vibrant bed to a single egg. Feel free to expand on this recipe and add additional
+      seasonings or herbs. You can even add a little cheese for more fat and protein!
+
+
+      Jessica
+      L.'
+    prepareTime: 10
+    cookTime: 20
+    ingredients:
+    - name: Zucchini
+      servingSize:
+        units: ounce
+        desc: "8-\xBD ounce"
+        qty: 8.5
+        grams: 241
+        scale: 2.132
+    - name: Olive Oil
+      servingSize:
+        units: teaspoon
+        desc: "2-\xBD teaspoon"
+        qty: 2.5
+        grams: 11
+        scale: 0.833
+    - name: Raw Egg
+      servingSize:
+        units: large
+        desc: 4 large
+        qty: 4
+        grams: 200
+        scale: 4
+    - name: Salt
+      servingSize:
+        units: teaspoon
+        desc: 1 teaspoon
+        qty: 1
+        grams: 6
+        scale: 1
+    - name: Black Pepper
+      servingSize:
+        units: teaspoon
+        desc: 1 teaspoon
+        qty: 1
+        grams: 2
+        scale: 1
+    steps:
+    - Preheat an oven to 350 degrees and line a sheet tray with aluminum foil or
+      simply grease it. Spiralize a large zucchini, and break up the spirals slightly
+      with your fingers.
+    - "Divide the zucchini into 4 sections (just slightly over 2 oz. each), and arrange
+      them into \u201Cnests\u201D on your sheet tray. Create a small space in the
+      center of each nest. Then, drizzle the olive oil gently across the zucchini."
+    - "Crack an egg into each zucchini nest. Sprinkle about \xBC tsp each of the
+      salt and pepper over each bird nest."
+    - Bake the bird nests for approx 20 minutes. This is enough time for the eggs
+      to fully cook and the zucchini to turn just slightly golden on the edges. Allow
+      the tray to cool for 2-3 minutes before transferring the finished recipe to
+      plates with a spatula.
+    - You may cook the bird nests for less than 20 minutes, if you want runnier eggs!
+    servings: 4
+    servingSizes:
+    - units: bird nest
+      desc: 
+      qty: 1
+      grams: 74
+      scale: 1
+    nutrients:
+      caloriesKCal: 114.047
+      totalCarbs: 2.801
+      diabetesCarbs: 2.036
+      sugar: 2.07
+      protein: 7.079
+      fat: 8.329
+      potassium: 228.026
+      magnesium: 16.842
+      calcium: 37.579
+      iron: 0.895
+      zinc: 0.727
+      copper: 0.047
+      phosphorus: 109.801
+      sodium: 656.436
+      selenium: 15.55
+      folate: 36.556
+      choline: 152.697
+      alcohol: 0
+      caffeine: 0
+      gluten: 0
+      manganese: 0.195
+    image: https://tinyurl.com/2p82zzca/348b12ac-3cf3-44a7-b193-4c686a07c0f2.png
+  - id: 2b3146d9-f265-48f1-8142-6d445ad8f4a8
+    name: Keto Thai Spicy Peanut Chicken With Asian Slaw
+    tags:
+    - beef-free
+    - chicken-free
+    - dairy-free
+    - eggs
+    - fish-free
+    - gluten-free
+    - good-for-leftovers
+    - high-protein
+    - keto
+    - low-carb
+    - lunch
+    - peanuts
+    - pork-free
+    - quick-easy
+    - shellfish-free
+    - skillet
+    - soy-free
+    - sulphites
+    - tree-nut-free
+    - wheat-free
+    description: 'Do you love Thai food? This Thai-inspired chicken dish is a little
+      spicy, a little nutty from some peanut butter, and tossed with fresh herbs.
+      A cool and creamy Asian slaw is paired on the side to combat any heat from
+      the chili sauce. You can have your lunch or dinner ready in 20 minutes or less!
+      You can double this recipe for 4 days of meal prep as well.
+
+
+      Jessica
+      L.'
+    prepareTime: 10
+    cookTime: 8
+    ingredients:
+    - name: Packaged Salads Fresh Favorites Colorful Coleslaw by Dole
+      servingSize:
+        units: cups
+        desc: 1 cups
+        qty: 1
+        grams: 56.667
+        scale: 1
+    - name: Salt
+      servingSize:
+        units: teaspoon
+        desc: 0.25 teaspoon
+        qty: 0.25
+        grams: 1.521
+        scale: 0.25
+    - name: Rice Vinegar
+      servingSize:
+        units: teaspoon
+        desc: 1 teaspoon
+        qty: 1
+        grams: 4.958
+        scale: 0.333
+    - name: Mayo
+      servingSize:
+        units: tablespoon
+        desc: 1 tablespoon
+        qty: 1
+        grams: 13.75
+        scale: 1
+    - name: Sesame Seeds
+      servingSize:
+        units: teaspoon, whole pieces
+        desc: "\xBC teaspoon, whole pieces"
+        qty: 0.25
+        grams: 0.667
+        scale: 0.005
+    - name: Lime Juice, Fresh
+      servingSize:
+        units: wedge - juice from one wedge or slice
+        desc: 1 wedge - juice from one wedge or slice
+        qty: 1
+        grams: 5
+        scale: 0.992
+    - name: Boneless Skinless Chicken Breast
+      servingSize:
+        units: ounce
+        desc: 10 ounce
+        qty: 10
+        grams: 283.497
+        scale: 10
+    - name: Olive Oil
+      servingSize:
+        units: tablespoon
+        desc: "\xBD tablespoon"
+        qty: 0.5
+        grams: 6.75
+        scale: 0.5
+    - name: Black Pepper
+      servingSize:
+        units: teaspoon
+        desc: 0.25 teaspoon
+        qty: 0.25
+        grams: 0.575
+        scale: 0.25
+    - name: Peanut Butter
+      servingSize:
+        units: tablespoon
+        desc: 1 tablespoon
+        qty: 1
+        grams: 16.125
+        scale: 1
+    - name: Sambal Oelek Paste Of Chili by Rooster
+      servingSize:
+        units: tablespoon
+        desc: 1 tablespoon
+        qty: 1
+        grams: 0
+        scale: 14.787
+    - name: Soy Sauce
+      servingSize:
+        units: tablespoon
+        desc: 2 tablespoon
+        qty: 2
+        grams: 31.876
+        scale: 2
+    - name: Cilantro
+      servingSize:
+        units: tablespoon, chopped
+        desc: "\xBD tablespoon, chopped"
+        qty: 0.5
+        grams: 0.5
+        scale: 0.5
+    - name: Basil
+      servingSize:
+        units: leaf
+        desc: 4 leaf
+        qty: 4
+        grams: 2
+        scale: 0.755
+    - name: Lime Juice, Fresh
+      servingSize:
+        units: wedge - juice from one wedge or slice
+        desc: 2 wedge - juice from one wedge or slice
+        qty: 2
+        grams: 10
+        scale: 1.983
+    steps:
+    - In a bowl, combine the slaw mix, salt, vinegar, mayo, sesame seeds, and first
+      amount of lime juice. Set this slaw mixture aside for later, giving the salt
+      time to draw out the juices.
+    - Trim any unwanted fat from your chicken, and chop the chicken into 1-inch cubes.
+    - Heat the olive oil in a medium sized pan on medium-high heat. Toss in the chicken
+      and black pepper, and cook these ingredients until the chicken just cooks through.
+    - Use a wooden spoon to move the chicken the the outer edges of the pan and turn
+      the heat to very low. Place the peanut butter, chili sauce, and soy sauce in
+      the exposed center of the pan.
+    - Let the heat melt the peanut butter slightly, then stir and combine the chicken
+      and sauce into a consistent and creamy mixture.
+    - Finally, chop the cilantro and basil and toss these with the chicken.
+    - Serve the hot chicken with the cool slaw and two lime wedges. You can add extra
+      cilantro as a garnish at your discretion. Enjoy!
+    servings: 2
+    servingSizes:
+    - units: chicken with slaw
+      desc: 
+      qty: 1
+      grams: 152
+      scale: 1
+    nutrients:
+      caloriesKCal: 394.486
+      totalCarbs: 5.723
+      diabetesCarbs: 4.075
+      sugar: 2.351
+      protein: 47.457
+      fat: 19.403
+      potassium: 489.083
+      magnesium: 66.661
+      calcium: 49.418
+      iron: 2.129
+      zinc: 2.149
+      copper: 0.129
+      phosphorus: 365.948
+      sodium: 1492.746
+      selenium: 35.31
+      folate: 37.213
+      choline: 130.073
+      alcohol: 0
+      caffeine: 0
+      gluten: 0
+      manganese: 0.378
+    image: https://tinyurl.com/2p82zzca/2b3146d9-f265-48f1-8142-6d445ad8f4a8.png
+  - id: aad5ffe9-2da0-44a8-8287-d62c7c91898b
+    name: 'Quick and Easy Keto Chili Lime Steak Fajita '
+    tags:
+    - gluten-free
+    - main-dishes
+    - paleo
+    - pork-free
+    - quick-easy
+    - shellfish-free
+    - tree-nut-free
+    - wheat-free
+    description: "If you are looking for a quick and easy recipe for your busy weeknights,
+      then you should end your search here. This Keto steak fajita recipe is tangy,
+      juicy, and slightly spicy. It requires 10 minutes of active prep time and another
+      10 minutes of cooking. You can prepare all the elements the night before and
+      have dinner ready in no time.\n\nThe steak is taken to the next level by marinating
+      it in chili powder, minced garlic, lime juice, cumin powder, and olive oil.
+      You can let it marinate for as little as 30 minutes, or ideally, overnight.
+      This leaves the steak juicy, tender, and highly flavorful.\n\nMost Keto steak
+      fajitas are cooked on the pan or grill, while this recipe uses an unconventional
+      method. The foil pack method is an easy, fast, and fuss-free way for cooking
+      Keto fajitas. First, you must preheat your oven to the highest setting, at
+      least 425 Fahrenheit. Then, you must portion out the seasoned vegetables into
+      the center of two 12\u201Dx12\u201D pieces of foil, and top them with the marinated
+      steak. Tightly wrap the foil around the steak and vegetables and bake for 6-8
+      minutes, depending on how you like your steak.\n\n### What can you serve this
+      fajita with?\n\nSome tasty toppings include sliced avocado, guacamole, sour
+      cream, fresh herbs, and lemon/lime juice. All these options complement the
+      steak fajita flavors and add freshness.  For sides, you can serve this dish
+      with cauliflower rice, steamed broccoli, or Keto tortillas.\n\n### Are fajitas
+      Keto?\n\nNot all fajita recipes are Keto-friendly, but this one is. This chili
+      lime steak fajita contains only 4g of net carbs per serving but carries tons
+      of flavor. The quantities of the onions and peppers used are enough to shine
+      through without sabotaging your daily carb allowance."
+    prepareTime: 40
+    cookTime: 10
+    ingredients:
+    - name: Beef steak, sirloin, no visible fat eaten
+      servingSize:
+        units: g
+        desc: 
+        qty: 300
+        grams: 300
+        scale: 10.582
+    - name: Extra virgin olive oil
+      servingSize:
+        units: tbsp
+        desc: 
+        qty: 3
+        grams: 40.5
+        scale: 3
+    - name: Lime juice, canned, bottled or boxed
+      servingSize:
+        units: tbsp
+        desc: 
+        qty: 1
+        grams: 15.375
+        scale: 3
+    - name: Garlic
+      servingSize:
+        units: clove
+        desc: 
+        qty: 1
+        grams: 3
+        scale: 1.059
+    - name: Cumin, seed
+      servingSize:
+        units: tsp
+        desc: 
+        qty: 0.5
+        grams: 1
+        scale: 0.5
+    - name: Chili powder
+      servingSize:
+        units: tsp
+        desc: 
+        qty: 0.5
+        grams: 1.334
+        scale: 0.5
+    - name: Salt
+      servingSize:
+        units: tsp
+        desc: 
+        qty: 1
+        grams: 6.084
+        scale: 1
+    - name: Onion
+      servingSize:
+        units: small
+        desc: 
+        qty: 0.25
+        grams: 17.5
+        scale: 0.109
+    - name: pepper
+      servingSize:
+        units: medium - 2 1/2" diameter x 2 3/4"
+        desc: 
+        qty: 0.5
+        grams: 59.5
+        scale: 0.399
+    - name: Red pepper
+      servingSize:
+        units: medium - 2 1/2" diameter x 2 3/4"
+        desc: 
+        qty: 0.25
+        grams: 29.75
+        scale: 0.2
+    - name: Oregano, ground
+      servingSize:
+        units: tsp
+        desc: 
+        qty: 0.25
+        grams: 0.45
+        scale: 0.25
+    - name: Paprika
+      servingSize:
+        units: tsp
+        desc: 
+        qty: 0.25
+        grams: 0.567
+        scale: 0.25
+    - name: Avocado
+      servingSize:
+        units: each
+        desc: 
+        qty: 0.5
+        grams: 68
+        scale: 0.5
+    steps:
+    - "Cut the steak into thin slices and add to a bowl. Crush the garlic and add
+      it to the steak. Mix in 2 tbsp of olive oil, lime juice,  cumin powder, chili
+      powder, and \xBD tsp salt. Cover the bowl with plastic wrap, and place it in
+      the fridge for 30 minutes."
+    - "Preheat oven to 425 degrees Fahrenheit. Slice the onion, green bell pepper,
+      and red bell pepper and add them to a bowl. Drizzle 1 tbsp of olive oil, and
+      mix in oregano, paprika, 1/2 tsp salt, and \xBC tsp black pepper. Set aside."
+    - "Take the steak bowl out of the fridge. Cut out two 12\u201Dx12\u201D pieces
+      of foil. Portion out the peppers mixture and arrange it in the center of each
+      foil sheet."
+    - 'Remove steak from marinade and arrange over the vegetables inside the foil
+      packs. Wrap the foil tightly around the steak and veggies. Bake for 6-8 minutes. '
+    - Add sliced avocado, fresh cilantro, and lime wedges to the center of each portion.
+      Serve immediately.
+    servings: 2
+    servingSizes:
+    - units: portion
+      desc: 
+      qty: 1
+      grams: 230
+      scale: 1
+    nutrients:
+      caloriesKCal: 498.107
+      totalCarbs: 7.903
+      diabetesCarbs: 4.072
+      sugar: 2.136
+      protein: 46.371
+      fat: 32.606
+      potassium: 888.065
+      magnesium: 42.873
+      calcium: 50.117
+      iron: 5.468
+      zinc: 7.229
+      copper: 0.193
+      phosphorus: 444.495
+      sodium: 1306.04
+      selenium: 41.408
+      folate: 50.809
+      choline: 128.967
+      alcohol: 0
+      caffeine: 0
+      gluten: 0
+      manganese: 0.194
+    image: https://tinyurl.com/2p82zzca/aad5ffe9-2da0-44a8-8287-d62c7c91898b.png
+  - id: d0758609-3097-47e1-a1cf-046ef32c26ed
+    name: Keto Veg and Egg Casserole
+    tags:
+    - beef-free
+    - chicken-free
+    - fish-free
+    - gluten-free
+    - keto
+    - kid-friendly
+    - lchf
+    - peanut-free
+    - pork-free
+    - relevant-meal--breakfast
+    - shellfish-free
+    - tree-nut-free
+    - vegetarian
+    - wheat-free
+    description: 'This is a great breakfast casserole recipe for anyone who still
+      needs their protein in the morning without eating meat! To fill the casserole
+      are yummy green slices of zucchini squash and bell pepper for a mild, peppery
+      taste. No casserole is complete without melted cheese on top!
+
+
+      Jessica
+      L.'
+    prepareTime: 7
+    cookTime: 35
+    ingredients:
+    - name: Zucchini, Raw
+      servingSize:
+        units: ounce
+        desc: 8 ounce
+        qty: 8
+        grams: 227
+        scale: 2.007
+    - name: Green Bell Peppers, Raw
+      servingSize:
+        units: ounce
+        desc: 3 ounce
+        qty: 3
+        grams: 85
+        scale: 0.571
+    - name: Raw Egg
+      servingSize:
+        units: large
+        desc: 4 large
+        qty: 4
+        grams: 200
+        scale: 4
+    - name: Whipping Cream, Extra Heavy/gourmet, Not Whipped
+      servingSize:
+        units: tablespoon
+        desc: 3 tablespoon
+        qty: 3
+        grams: 45
+        scale: 3
+    - name: Salt
+      servingSize:
+        units: teaspoon
+        desc: "\xBC teaspoon"
+        qty: 0.25
+        grams: 2
+        scale: 0.25
+    - name: Black Pepper, Ground
+      servingSize:
+        units: teaspoon
+        desc: "\xBC teaspoon"
+        qty: 0.25
+        grams: 0
+        scale: 0.25
+    - name: Onion Powder
+      servingSize:
+        units: teaspoon
+        desc: "\xBC teaspoon"
+        qty: 0.25
+        grams: 0
+        scale: 0.25
+    - name: Garlic, Powder
+      servingSize:
+        units: teaspoon
+        desc: "\u215B teaspoon"
+        qty: 0.125
+        grams: 0
+        scale: 0.125
+    - name: Crushed Red Pepper by Simply Organic
+      servingSize:
+        units: tsp
+        desc: "\u215B tsp"
+        qty: 0.125
+        grams: 0
+        scale: 0.125
+    - name: Mexican Blend Cheese
+      servingSize:
+        units: cup, grated
+        desc: "\xBD cup, grated"
+        qty: 0.5
+        grams: 57
+        scale: 1.993
+    steps:
+    - Preheat an oven to 350 degrees. Quarter your zucchini into thin slices and
+      dice the bell pepper. Toss and combine the veggies in the base of a 2QT glass
+      baking dish.
+    - Whisk together the remaining ingredients except for the cheese. Pour the egg
+      mix over the veggies. Gently shake the baking dish until the veggies settle
+      in the egg. Arrange the shredded cheese over the casserole.
+    - Bake for 35 minutes. After cooling for 5 minutes, you can slice squares or
+      rectangles for serving.
+    servings: 4
+    servingSizes:
+    - units: slice
+      desc: 
+      qty: 1
+      grams: 127
+      scale: 1
+    nutrients:
+      caloriesKCal: 182.488
+      totalCarbs: 4.054
+      diabetesCarbs: 3.034
+      sugar: 2.985
+      protein: 10.829
+      fat: 13.798
+      potassium: 282.281
+      magnesium: 22.416
+      calcium: 138.005
+      iron: 0.973
+      zinc: 1.169
+      copper: 0.06
+      phosphorus: 185.483
+      sodium: 265.484
+      selenium: 17.948
+      folate: 40.039
+      choline: 157.646
+      alcohol: 0
+      caffeine: 0
+      gluten: 0
+      manganese: 0.163
+    image: https://tinyurl.com/2p82zzca/d0758609-3097-47e1-a1cf-046ef32c26ed.png
