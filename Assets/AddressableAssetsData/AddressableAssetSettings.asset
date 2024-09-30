@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
+  m_Name: AddressableAssetSettings
+  m_EditorClassIdentifier: 
+  m_DefaultGroup: fd087f72ab94bf441bde00a70169a476
+  m_currentHash:
+    serializedVersion: 2
+    Hash: 439de924b1123f116830275dadac150a
+  m_OptimizeCatalogSize: 0
+  m_BuildRemoteCatalog: 1
+  m_BundleLocalCatalog: 0
+  m_CatalogRequestsTimeout: 0
+  m_DisableCatalogUpdateOnStart: 0
+  m_IgnoreUnsupportedFilesInBuild: 0
+  m_UniqueBundleIds: 0
+  m_NonRecursiveBuilding: 1
+  m_CCDEnabled: 0
+  m_maxConcurrentWebRequests: 3
+  m_ContiguousBundles: 1
+  m_StripUnityVersionFromBundleBuild: 0
+  m_DisableVisibleSubAssetRepresentations: 0
+  m_ShaderBundleNaming: 0
+  m_ShaderBundleCustomNaming: 
+  m_MonoScriptBundleNaming: 0
+  m_CheckForContentUpdateRestrictionsOption: 2
+  m_MonoScriptBundleCustomNaming: 
+  m_RemoteCatalogBuildPath:
+    m_Id: e065167831428b44ba6a59d2f5089cc2
+  m_RemoteCatalogLoadPath:
+    m_Id: 671607022fcd4494881afa74d0407913
+  m_ContentStateBuildPathProfileVariableName: Remote.BuildPath
+  m_CustomContentStateBuildPath: 
+  m_ContentStateBuildPath: 
+  m_BuildAddressablesWithPlayerBuild: 0
+  m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
+  m_GroupAssets:
+  - {fileID: 11400000, guid: 46fb0fc83daedb34c819ad573a4917e2, type: 2}
+  - {fileID: 11400000, guid: 90d563288208f1344ba3819d1c87a3e1, type: 2}
+  m_BuildSettings:
+    m_CompileScriptsInVirtualMode: 0
+    m_CleanupStreamingAssetsAfterBuilds: 1
+    m_LogResourceManagerExceptions: 1
+    m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
+  m_ProfileSettings:
+    m_Profiles:
+    - m_InheritedParent: 
+      m_Id: c9e554b14190c4847a45116d75a77727
+      m_ProfileName: Default
+      m_Values:
+      - m_Id: f524ec67652715242909b6575aaa2236
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 5a808bf0af737a548b7aef9443b0f2aa
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 1bb229cc27bb3c04ea8f1408f9c8d80a
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: e065167831428b44ba6a59d2f5089cc2
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: 671607022fcd4494881afa74d0407913
+        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+    - m_InheritedParent: 
+      m_Id: 1702c94fb66747e40adfb4b914a82caf
+      m_ProfileName: New Profile
+      m_Values:
+      - m_Id: f524ec67652715242909b6575aaa2236
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 5a808bf0af737a548b7aef9443b0f2aa
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 1bb229cc27bb3c04ea8f1408f9c8d80a
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: e065167831428b44ba6a59d2f5089cc2
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: 671607022fcd4494881afa74d0407913
+        m_Value: gs://vrcookinggame.appspot.com
+    - m_InheritedParent: 
+      m_Id: c01e3f2ad94ade14aa3dec046208ff19
+      m_ProfileName: VrCookingGameAssets
+      m_Values:
+      - m_Id: f524ec67652715242909b6575aaa2236
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: 5a808bf0af737a548b7aef9443b0f2aa
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 1bb229cc27bb3c04ea8f1408f9c8d80a
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: e065167831428b44ba6a59d2f5089cc2
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: 671607022fcd4494881afa74d0407913
+        m_Value: gs://vrcookinggame.appspot.com/[BuildTarget]
+    m_ProfileEntryNames:
+    - m_Id: f524ec67652715242909b6575aaa2236
+      m_Name: BuildTarget
+      m_InlineUsage: 0
+    - m_Id: 5a808bf0af737a548b7aef9443b0f2aa
+      m_Name: Local.BuildPath
+      m_InlineUsage: 0
+    - m_Id: 1bb229cc27bb3c04ea8f1408f9c8d80a
+      m_Name: Local.LoadPath
+      m_InlineUsage: 0
+    - m_Id: e065167831428b44ba6a59d2f5089cc2
+      m_Name: Remote.BuildPath
+      m_InlineUsage: 0
+    - m_Id: 671607022fcd4494881afa74d0407913
+      m_Name: Remote.LoadPath
+      m_InlineUsage: 0
+    m_ProfileVersion: 1
+  m_LabelTable:
+    m_LabelNames:
+    - default
+    - Recipe1
+    - Recipe2
+  m_SchemaTemplates: []
+  m_GroupTemplateObjects:
+  - {fileID: 11400000, guid: 9f334db44c211fa498a1e1eff31e281c, type: 2}
+  m_InitializationObjects: []
+  m_CertificateHandlerType:
+    m_AssemblyName: 
+    m_ClassName: 
+  m_ActivePlayerDataBuilderIndex: 3
+  m_DataBuilders:
+  - {fileID: 11400000, guid: 3d8f2ce0410b1bb44acf034be1c69cda, type: 2}
+  - {fileID: 11400000, guid: 221093c106306e344932f9f3b0fd92c8, type: 2}
+  - {fileID: 11400000, guid: e89b6ca546cfedd41a399046b028e4e4, type: 2}
+  - {fileID: 11400000, guid: a7a6e7b51735da5458bd95682c136e81, type: 2}
+  m_ActiveProfileId: c01e3f2ad94ade14aa3dec046208ff19
+  m_HostingServicesManager:
+    m_HostingServiceInfos: []
+    m_Settings: {fileID: 11400000}
+    m_NextInstanceId: 0
+    m_RegisteredServiceTypeRefs: []
+    m_PingTimeoutInMilliseconds: 5000

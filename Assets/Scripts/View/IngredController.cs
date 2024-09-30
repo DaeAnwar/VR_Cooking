@@ -9,7 +9,7 @@ public class IngredController : MonoBehaviour
 
     public void SetIngredient(Ingredient Ingredient)
     {
-        StepText.text = Ingredient.name;
+        StepText.text = Ingredient.Name;
 
 
     }

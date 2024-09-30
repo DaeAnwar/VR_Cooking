@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,21 +17,24 @@ using System;
 #endif 
 
 
-namespace CurvedUI { 
- 
+namespace CurvedUI
+{
 
-[CustomEditor(typeof(CurvedUISettings))]
+
+    [CustomEditor(typeof(CurvedUISettings))]
     [ExecuteInEditMode]
-    public class CurvedUISettingsEditor : Editor {
+    public class CurvedUISettingsEditor : Editor
+    {
 
 #pragma warning disable 414
         bool ShowRemoveCurvedUI = false;
         static bool ShowAdvaced = false;
-		bool loadingCustomDefine = false;
+        bool loadingCustomDefine = false;
         static bool CUIeventSystemPresent = false;
         private bool inPrefabMode = false;
 
-        [SerializeField][HideInInspector]
+        [SerializeField]
+        [HideInInspector]
         Dictionary<CurvedUIInputModule.CUIControlMethod, string> m_controlMethodDefineDict;
 
 #if CURVEDUI_STEAMVR_2
@@ -44,12 +48,12 @@ namespace CurvedUI {
 
         #region LIFECYCLE
         void Awake()
-		{
-			AddCurvedUIComponents();
+        {
+            AddCurvedUIComponents();
         }
 
         void OnEnable()
-		{
+        {
             //if we're firing OnEnable, this means any compilation has ended. We're good!
             loadingCustomDefine = false;
 
@@ -57,10 +61,10 @@ namespace CurvedUI {
             var eventSystems = (FindObjectsOfType(typeof(EventSystem)));
             // If yes, check if it's a CurvedUIEventSystem 
             CUIeventSystemPresent = eventSystems.Any(x => x is CurvedUIEventSystem);
-            #if !CURVEDUI_UNITY_XR
+#if !CURVEDUI_UNITY_XR
             //and make sure it already has CurvedUIInputModule attached
             if (eventSystems.Length > 0) CurvedUIInputModule.Instance.forceModuleActive = true;
-            #endif
+#endif
 
             //hacky way to make sure event is connected only once, but it works!
             EditorApplication.hierarchyChanged -= AddCurvedUIComponents;
@@ -72,20 +76,20 @@ namespace CurvedUI {
             if (Application.isPlaying)
             {
                 CurvedUISettings myTarget = (CurvedUISettings)target;
-                
+
                 //Canvas' layer not included in RaycastLayerMask warning
                 if (!IsInLayerMask(myTarget.gameObject.layer, CurvedUIInputModule.Instance.RaycastLayerMask) &&
                     myTarget.Interactable)
                 {
                     Debug.LogError("CURVEDUI: " + WarningLayerNotIncluded, myTarget.gameObject);
                 }
-                
+
                 //check if the currently selected control method is enabled in editor.
                 //Otherwise, show error.
                 string define = PlayerSettings.GetScriptingDefineSymbolsForGroup(EditorUserBuildSettings.selectedBuildTargetGroup);
-                foreach(var key in ControlMethodDefineDict.Keys)
+                foreach (var key in ControlMethodDefineDict.Keys)
                 {
-                    if(myTarget.ControlMethod == key && !define.Contains(ControlMethodDefineDict[key]))
+                    if (myTarget.ControlMethod == key && !define.Contains(ControlMethodDefineDict[key]))
                         Debug.LogError("CURVEDUI: Selected control method (" + key.ToString() + ") is not enabled. " +
                                        "Enable it on CurvedUISettings component", myTarget.gameObject);
                 }
@@ -115,15 +119,15 @@ namespace CurvedUI {
             }
 #endif
         }
-#endregion
+        #endregion
 
 
 
-            
+
         public override void OnInspectorGUI()
         {
-     
-       
+
+
 
 
             //initial settings------------------------------------//
@@ -137,15 +141,15 @@ namespace CurvedUI {
             //Version----------------------------------------------//
             GUILayout.Label("Version " + CurvedUISettings.Version, EditorStyles.miniLabel);
 
-            
+
             //Warnings------------------------------------------//
             //Canvas is on layer that is not part of RaycastLayerMask
-            if(CurvedUIInputModule.CanInstanceBeAccessed && !IsInLayerMask(myTarget.gameObject.layer, CurvedUIInputModule.Instance.RaycastLayerMask) && myTarget.Interactable)
+            if (CurvedUIInputModule.CanInstanceBeAccessed && !IsInLayerMask(myTarget.gameObject.layer, CurvedUIInputModule.Instance.RaycastLayerMask) && myTarget.Interactable)
             {
                 EditorGUILayout.HelpBox(WarningLayerNotIncluded, MessageType.Error);
                 GUILayout.Space(30);
             }
-            
+
             //Improper event system warning
             if (CurvedUIInputModule.CanInstanceBeAccessed && CUIeventSystemPresent == false)
             {
@@ -159,8 +163,8 @@ namespace CurvedUI {
                 GUILayout.Space(30);
             }
             //-----------------------------------------------------//    
-             
-            
+
+
             //Control methods--------------------------------------//
             DrawControlMethods();
 
@@ -171,47 +175,48 @@ namespace CurvedUI {
             switch (myTarget.Shape)
             {
                 case CurvedUISettings.CurvedUIShape.CYLINDER:
-                {
-                    myTarget.Angle = EditorGUILayout.IntSlider("Angle", myTarget.Angle, -360, 360);
-                    myTarget.PreserveAspect = EditorGUILayout.Toggle("Preserve Aspect", myTarget.PreserveAspect);
-
-                    break;
-                }
-                case CurvedUISettings.CurvedUIShape.CYLINDER_VERTICAL:
-                {
-                    myTarget.Angle = EditorGUILayout.IntSlider("Angle", myTarget.Angle, -360, 360);
-                    myTarget.PreserveAspect = EditorGUILayout.Toggle("Preserve Aspect", myTarget.PreserveAspect);
-
-                    break;
-                }
-                case CurvedUISettings.CurvedUIShape.RING:
-                {
-                    myTarget.RingExternalDiameter = Mathf.Clamp(EditorGUILayout.IntField("External Diameter", myTarget.RingExternalDiameter), 1, 100000);
-                    myTarget.Angle = EditorGUILayout.IntSlider("Angle", myTarget.Angle, 0, 360);
-                    myTarget.RingFill = EditorGUILayout.Slider("Fill", myTarget.RingFill, 0.0f, 1.0f);
-                    myTarget.RingFlipVertical = EditorGUILayout.Toggle("Flip Canvas Vertically", myTarget.RingFlipVertical);
-                    break;
-                }
-                case CurvedUISettings.CurvedUIShape.SPHERE:
-                {
-                    GUILayout.BeginHorizontal();
-                    GUILayout.Space(150);
-                    EditorGUILayout.HelpBox("Sphere shape is more expensive than a Cylinder shape. Keep this in mind when working on mobile VR.", MessageType.Info);
-                    GUILayout.EndHorizontal();
-                    GUILayout.Space(10);
-
-                    if (myTarget.PreserveAspect)
                     {
                         myTarget.Angle = EditorGUILayout.IntSlider("Angle", myTarget.Angle, -360, 360);
-                    }
-                    else {
-                        myTarget.Angle = EditorGUILayout.IntSlider("Horizontal Angle", myTarget.Angle, 0, 360);
-                        myTarget.VerticalAngle = EditorGUILayout.IntSlider("Vertical Angle", myTarget.VerticalAngle, 0, 180);
-                    }
+                        myTarget.PreserveAspect = EditorGUILayout.Toggle("Preserve Aspect", myTarget.PreserveAspect);
 
-                    myTarget.PreserveAspect = EditorGUILayout.Toggle("Preserve Aspect", myTarget.PreserveAspect);
-                    break;
-                }
+                        break;
+                    }
+                case CurvedUISettings.CurvedUIShape.CYLINDER_VERTICAL:
+                    {
+                        myTarget.Angle = EditorGUILayout.IntSlider("Angle", myTarget.Angle, -360, 360);
+                        myTarget.PreserveAspect = EditorGUILayout.Toggle("Preserve Aspect", myTarget.PreserveAspect);
+
+                        break;
+                    }
+                case CurvedUISettings.CurvedUIShape.RING:
+                    {
+                        myTarget.RingExternalDiameter = Mathf.Clamp(EditorGUILayout.IntField("External Diameter", myTarget.RingExternalDiameter), 1, 100000);
+                        myTarget.Angle = EditorGUILayout.IntSlider("Angle", myTarget.Angle, 0, 360);
+                        myTarget.RingFill = EditorGUILayout.Slider("Fill", myTarget.RingFill, 0.0f, 1.0f);
+                        myTarget.RingFlipVertical = EditorGUILayout.Toggle("Flip Canvas Vertically", myTarget.RingFlipVertical);
+                        break;
+                    }
+                case CurvedUISettings.CurvedUIShape.SPHERE:
+                    {
+                        GUILayout.BeginHorizontal();
+                        GUILayout.Space(150);
+                        EditorGUILayout.HelpBox("Sphere shape is more expensive than a Cylinder shape. Keep this in mind when working on mobile VR.", MessageType.Info);
+                        GUILayout.EndHorizontal();
+                        GUILayout.Space(10);
+
+                        if (myTarget.PreserveAspect)
+                        {
+                            myTarget.Angle = EditorGUILayout.IntSlider("Angle", myTarget.Angle, -360, 360);
+                        }
+                        else
+                        {
+                            myTarget.Angle = EditorGUILayout.IntSlider("Horizontal Angle", myTarget.Angle, 0, 360);
+                            myTarget.VerticalAngle = EditorGUILayout.IntSlider("Vertical Angle", myTarget.VerticalAngle, 0, 180);
+                        }
+
+                        myTarget.PreserveAspect = EditorGUILayout.Toggle("Preserve Aspect", myTarget.PreserveAspect);
+                        break;
+                    }
             }//end of shape settings-------------------------------//
 
 
@@ -226,7 +231,7 @@ namespace CurvedUI {
             //advanced settings------------------------------------//
             GUILayout.Space(30);
             if (!ShowAdvaced)
-            {              
+            {
                 if (GUILayout.Button("Show Advanced Settings"))
                 {
                     ShowAdvaced = true;
@@ -234,20 +239,20 @@ namespace CurvedUI {
                 }
             }
             else
-            {            
+            {
                 //hide advances settings button.
                 if (GUILayout.Button("Hide Advanced Settings")) ShowAdvaced = false;
                 GUILayout.Space(20);
-                
-               
+
+
                 //InputModule Options - only if we're not in prefab mode and input module is available.
-                if(inPrefabMode || !CurvedUIInputModule.CanInstanceBeAccessed)
+                if (inPrefabMode || !CurvedUIInputModule.CanInstanceBeAccessed)
                     EditorGUILayout.HelpBox(WarningInputModuleNotAccessible, MessageType.Warning);
                 else
                 {
                     CurvedUIInputModule.Instance.RaycastLayerMask = LayerMaskField("Raycast Layer Mask",
                         CurvedUIInputModule.Instance.RaycastLayerMask);
-            
+
                     //pointer override
                     GUILayout.Space(20);
                     CurvedUIInputModule.Instance.PointerTransformOverride = (Transform)EditorGUILayout.ObjectField("Pointer Override", CurvedUIInputModule.Instance.PointerTransformOverride, typeof(Transform), true);
@@ -256,8 +261,8 @@ namespace CurvedUI {
                     GUILayout.Label("(Optional) If set, its position and forward (blue) direction will be used to point at canvas.", EditorStyles.helpBox);
                     GUILayout.EndHorizontal();
                 }
-                
-                
+
+
                 //quality
                 GUILayout.Space(20);
                 myTarget.Quality = EditorGUILayout.Slider("Quality", myTarget.Quality, 0.1f, 3.0f);
@@ -265,13 +270,13 @@ namespace CurvedUI {
                 GUILayout.Space(150);
                 GUILayout.Label("Smoothness of the curve. Bigger values mean more subdivisions. Decrease for better performance. Default 1", EditorStyles.helpBox);
                 GUILayout.EndHorizontal();
-                
+
                 //common options
                 myTarget.Interactable = EditorGUILayout.Toggle("Interactable", myTarget.Interactable);
                 myTarget.BlocksRaycasts = EditorGUILayout.Toggle("Blocks Raycasts", myTarget.BlocksRaycasts);
-                if (myTarget.Shape != CurvedUISettings.CurvedUIShape.SPHERE) myTarget.ForceUseBoxCollider = 
+                if (myTarget.Shape != CurvedUISettings.CurvedUIShape.SPHERE) myTarget.ForceUseBoxCollider =
                     EditorGUILayout.Toggle("Force Box Colliders Use", myTarget.ForceUseBoxCollider);
-                
+
                 //add components button
                 GUILayout.Space(20);
                 GUILayout.BeginHorizontal();
@@ -285,9 +290,10 @@ namespace CurvedUI {
                 {
                     if (GUILayout.Button("Remove CurvedUI from Canvas")) ShowRemoveCurvedUI = true;
                 }
-                else {
-                    if (GUILayout.Button("Remove CurvedUI"))   RemoveCurvedUIComponents();
-                    if (GUILayout.Button("Cancel"))   ShowRemoveCurvedUI = false;
+                else
+                {
+                    if (GUILayout.Button("Remove CurvedUI")) RemoveCurvedUIComponents();
+                    if (GUILayout.Button("Cancel")) ShowRemoveCurvedUI = false;
                 }
                 GUILayout.EndHorizontal();
                 //remove all defines button
@@ -296,7 +302,7 @@ namespace CurvedUI {
                 GUILayout.EndVertical();
                 GUILayout.EndHorizontal();
 
-                
+
 
                 //documentation link
                 GUILayout.Space(20);
@@ -321,7 +327,7 @@ namespace CurvedUI {
         }
 
 
-#region CUSTOM GUI ELEMENTS
+        #region CUSTOM GUI ELEMENTS
         void DrawControlMethods()
         {
             GUILayout.Label("Global Settings", EditorStyles.boldLabel);
@@ -330,7 +336,7 @@ namespace CurvedUI {
             //These are stored in CurvedUInputModule
             if (inPrefabMode || !CurvedUIInputModule.CanInstanceBeAccessed)
             {
-                if(Application.isPlaying)
+                if (Application.isPlaying)
                     EditorGUILayout.HelpBox(ErrorInputModuleMissing, MessageType.Error);
                 else
                     EditorGUILayout.HelpBox(WarningInputModuleNotAccessible, MessageType.Warning);
@@ -341,7 +347,7 @@ namespace CurvedUI {
             CurvedUIInputModule.ControlMethod = (CurvedUIInputModule.CUIControlMethod)EditorGUILayout.EnumPopup("Control Method", CurvedUIInputModule.ControlMethod);
             GUILayout.BeginHorizontal();
             GUILayout.Space(150);
-			GUILayout.BeginVertical();
+            GUILayout.BeginVertical();
 
 
             //Custom Settings for each Control Method---------------//
@@ -350,28 +356,28 @@ namespace CurvedUI {
 
 
                 case CurvedUIInputModule.CUIControlMethod.MOUSE:
-                {
+                    {
 #if CURVEDUI_UNITY_XR
-					EditorGUILayout.HelpBox(WarningDisableUnityXR, MessageType.Warning);
-					DrawCustomDefineSwitcher("");
+                        EditorGUILayout.HelpBox(WarningDisableUnityXR, MessageType.Warning);
+                        DrawCustomDefineSwitcher("");
 #else
                     GUILayout.Label("Basic Controller. Mouse on screen", EditorStyles.helpBox);
-                    #if CURVEDUI_NEW_INPUT_SYSTEM
+#if CURVEDUI_NEW_INPUT_SYSTEM
                     EditorGUILayout.HelpBox(
                         "Mouse position will be wrong if you have XR plugin enabled. This is a bug in new Input System package.",
                         MessageType.Warning);
-                    #endif
 #endif
-                    break;
-                }// end of MOUSE
+#endif
+                        break;
+                    }// end of MOUSE
 
 
 
                 case CurvedUIInputModule.CUIControlMethod.GAZE:
-                {
+                    {
 #if CURVEDUI_UNITY_XR
-					EditorGUILayout.HelpBox(WarningDisableUnityXR, MessageType.Warning);
-					DrawCustomDefineSwitcher("");
+                        EditorGUILayout.HelpBox(WarningDisableUnityXR, MessageType.Warning);
+                        DrawCustomDefineSwitcher("");
 #else
                     GUILayout.Label("Center of Canvas's Event Camera acts as a pointer. Can be used with any headset. ", EditorStyles.helpBox);
                     CurvedUIInputModule.Instance.GazeUseTimedClick = EditorGUILayout.Toggle("Use Timed Click", CurvedUIInputModule.Instance.GazeUseTimedClick);
@@ -383,57 +389,57 @@ namespace CurvedUI {
                         CurvedUIInputModule.Instance.GazeTimedClickProgressImage = (UnityEngine.UI.Image)EditorGUILayout.ObjectField("Progress Image To FIll", CurvedUIInputModule.Instance.GazeTimedClickProgressImage, typeof(UnityEngine.UI.Image), true);
                     }
 #endif
-                    break;
-                }// end of GAZE
+                        break;
+                    }// end of GAZE
 
 
 
                 case CurvedUIInputModule.CUIControlMethod.WORLD_MOUSE:
-                {
+                    {
 
 #if CURVEDUI_UNITY_XR
-					EditorGUILayout.HelpBox(WarningDisableUnityXR, MessageType.Warning);
-					DrawCustomDefineSwitcher("");
+                        EditorGUILayout.HelpBox(WarningDisableUnityXR, MessageType.Warning);
+                        DrawCustomDefineSwitcher("");
 #else
                     GUILayout.Label("Mouse controller that is independent of the camera view. Use WorldSpaceMouseOnCanvas function to get its position.", EditorStyles.helpBox);
                     CurvedUIInputModule.Instance.WorldSpaceMouseSensitivity = EditorGUILayout.FloatField("Mouse Sensitivity", CurvedUIInputModule.Instance.WorldSpaceMouseSensitivity);
 #endif
-					break;
-                }// end of WORLD_MOUSE
+                        break;
+                    }// end of WORLD_MOUSE
 
 
 
                 case CurvedUIInputModule.CUIControlMethod.CUSTOM_RAY:
-                {
-                    GUILayout.Label("Set a ray used to interact with canvas using CustomControllerRay function. Use CustomControllerButtonState bool to set button pressed state. Find both in CurvedUIInputModule class", EditorStyles.helpBox);
-                    GUILayout.BeginHorizontal();
-                    //GUILayout.Space(20);
-                    GUILayout.FlexibleSpace();
-                    if (GUILayout.Button("View code snippet")) Help.BrowseURL("https://docs.google.com/document/d/10hNcvOMissNbGgjyFyV1MS7HwkXXE6270A6Ul8h8pnQ/edit#heading=h.b164qm67xp15");
-                    GUILayout.EndHorizontal();
-                    break;
-                }// end of CUSTOM_RAY
+                    {
+                        GUILayout.Label("Set a ray used to interact with canvas using CustomControllerRay function. Use CustomControllerButtonState bool to set button pressed state. Find both in CurvedUIInputModule class", EditorStyles.helpBox);
+                        GUILayout.BeginHorizontal();
+                        //GUILayout.Space(20);
+                        GUILayout.FlexibleSpace();
+                        if (GUILayout.Button("View code snippet")) Help.BrowseURL("https://docs.google.com/document/d/10hNcvOMissNbGgjyFyV1MS7HwkXXE6270A6Ul8h8pnQ/edit#heading=h.b164qm67xp15");
+                        GUILayout.EndHorizontal();
+                        break;
+                    }// end of CUSTOM_RAY
 
 
 
                 case CurvedUIInputModule.CUIControlMethod.STEAMVR_LEGACY:
-                {
+                    {
 #if CURVEDUI_STEAMVR_LEGACY
                     // vive enabled, we can show settings
                     GUILayout.Label("Use with SteamVR plugin 1.2 or below. Trigger acts a button", EditorStyles.helpBox);
                     CurvedUIInputModule.Instance.UsedHand = (CurvedUIInputModule.Hand)EditorGUILayout.EnumPopup("Used Controller", CurvedUIInputModule.Instance.UsedHand);
 
 #else
-                    GUILayout.Label("For SteamVR plugin 1.2 or below.  Make sure you imported that SDK before enabling.", EditorStyles.helpBox);
-                    DrawCustomDefineSwitcher(ControlMethodDefineDict[CurvedUIInputModule.CUIControlMethod.STEAMVR_LEGACY]);
+                        GUILayout.Label("For SteamVR plugin 1.2 or below.  Make sure you imported that SDK before enabling.", EditorStyles.helpBox);
+                        DrawCustomDefineSwitcher(ControlMethodDefineDict[CurvedUIInputModule.CUIControlMethod.STEAMVR_LEGACY]);
 #endif
-                    break;
-                }// end of STEAMVR_LEGACY
+                        break;
+                    }// end of STEAMVR_LEGACY
 
 
 
                 case CurvedUIInputModule.CUIControlMethod.STEAMVR_2:
-                {
+                    {
 #if CURVEDUI_STEAMVR_2
 					GUILayout.Label("Use SteamVR controllers to interact with canvas. Requires SteamVR Plugin 2.0 or later.", EditorStyles.helpBox);
                    
@@ -476,16 +482,16 @@ namespace CurvedUI {
                     }
 
 #else
-                    GUILayout.Label("For SteamVR plugin 2.0 or above. Make sure you imported that SDK before enabling.", EditorStyles.helpBox);
-                    DrawCustomDefineSwitcher(ControlMethodDefineDict[CurvedUIInputModule.CUIControlMethod.STEAMVR_2]);
+                        GUILayout.Label("For SteamVR plugin 2.0 or above. Make sure you imported that SDK before enabling.", EditorStyles.helpBox);
+                        DrawCustomDefineSwitcher(ControlMethodDefineDict[CurvedUIInputModule.CUIControlMethod.STEAMVR_2]);
 #endif
-                    break;
-                }// end of STEAMVR_2
+                        break;
+                    }// end of STEAMVR_2
 
 
 
                 case CurvedUIInputModule.CUIControlMethod.OCULUSVR:
-                {
+                    {
 #if CURVEDUI_OCULUSVR
                     // oculus enabled, we can show settings
                     GUILayout.Label("Use Rift, Quest, Go, or GearVR controller to interact with your canvas.", EditorStyles.helpBox);
@@ -494,37 +500,37 @@ namespace CurvedUI {
                     //button property
                     CurvedUIInputModule.Instance.OculusTouchInteractionButton = (OVRInput.Button)EditorGUILayout.EnumPopup("Interaction Button", CurvedUIInputModule.Instance.OculusTouchInteractionButton);
 #else
-                    GUILayout.Label("Make sure you imported the SDK before enabling.", EditorStyles.helpBox);
-                    DrawCustomDefineSwitcher(ControlMethodDefineDict[CurvedUIInputModule.CUIControlMethod.OCULUSVR]);
+                        GUILayout.Label("Make sure you imported the SDK before enabling.", EditorStyles.helpBox);
+                        DrawCustomDefineSwitcher(ControlMethodDefineDict[CurvedUIInputModule.CUIControlMethod.OCULUSVR]);
 #endif
-                    break;
-                }// end of OCULUSVR
-                    
-                    
-                    
+                        break;
+                    }// end of OCULUSVR
+
+
+
                 case CurvedUIInputModule.CUIControlMethod.UNITY_XR:
-                {
+                    {
 #if CURVEDUI_UNITY_XR
-                    // oculus enabled, we can show settings
-                    GUILayout.Label("Use Unity XR Toolkit 1.0.0 or later to interact with the canvas.", EditorStyles.helpBox);
-                    if (GUILayout.Button("Unity XR step-by-step guide")) OpenDocs();   
-                    GUILayout.Space(20);
-                    //hand property
-                    CurvedUIInputModule.Instance.UsedHand = (CurvedUIInputModule.Hand)EditorGUILayout.EnumPopup("Hand", CurvedUIInputModule.Instance.UsedHand);
-                    //assign controllers
-                    CurvedUIInputModule.Instance.RightXRController = (UnityEngine.XR.Interaction.Toolkit.XRBaseController)EditorGUILayout.ObjectField("Right Controller",
-                        CurvedUIInputModule.Instance.RightXRController, typeof(UnityEngine.XR.Interaction.Toolkit.XRBaseController), true);
-                    CurvedUIInputModule.Instance.LeftXRController = (UnityEngine.XR.Interaction.Toolkit.XRBaseController)EditorGUILayout.ObjectField("Left Controller",
-                        CurvedUIInputModule.Instance.LeftXRController, typeof(UnityEngine.XR.Interaction.Toolkit.XRBaseController), true);
+                        // oculus enabled, we can show settings
+                        GUILayout.Label("Use Unity XR Toolkit 1.0.0 or later to interact with the canvas.", EditorStyles.helpBox);
+                        if (GUILayout.Button("Unity XR step-by-step guide")) OpenDocs();
+                        GUILayout.Space(20);
+                        //hand property
+                        CurvedUIInputModule.Instance.UsedHand = (CurvedUIInputModule.Hand)EditorGUILayout.EnumPopup("Hand", CurvedUIInputModule.Instance.UsedHand);
+                        //assign controllers
+                        CurvedUIInputModule.Instance.RightXRController = (UnityEngine.XR.Interaction.Toolkit.XRBaseController)EditorGUILayout.ObjectField("Right Controller",
+                            CurvedUIInputModule.Instance.RightXRController, typeof(UnityEngine.XR.Interaction.Toolkit.XRBaseController), true);
+                        CurvedUIInputModule.Instance.LeftXRController = (UnityEngine.XR.Interaction.Toolkit.XRBaseController)EditorGUILayout.ObjectField("Left Controller",
+                            CurvedUIInputModule.Instance.LeftXRController, typeof(UnityEngine.XR.Interaction.Toolkit.XRBaseController), true);
 #else
                     GUILayout.Label("Make sure you imported Unity XR Toolkit 1.0.0pre3 or later AND New Input System packages before enabling.", EditorStyles.helpBox);
                     DrawCustomDefineSwitcher(ControlMethodDefineDict[CurvedUIInputModule.CUIControlMethod.UNITY_XR]);
 #endif
-                    break;
-                }// end of UNITY_XR
+                        break;
+                    }// end of UNITY_XR
 
 
-                    
+
 
 
             }//end of CUIControlMethod Switch
@@ -536,26 +542,26 @@ namespace CurvedUI {
 
 
 
-		/// <summary>
-		/// Draws the define switcher for different control methods. 
-		/// Because different control methods use different API's that may not always be available, 
-		/// CurvedUI needs to be recompile with different custom defines to fix this. This method 
-		/// manages the defines.
-		/// </summary>
-		/// <param name="defineToSet">Switcho.</param>
-		void DrawCustomDefineSwitcher(string defineToSet)
-		{
-			GUILayout.BeginVertical();
-			GUILayout.Label("Press the [Enable] button to recompile scripts for this control method. Afterwards, you'll see more settings here.", EditorStyles.helpBox);
+        /// <summary>
+        /// Draws the define switcher for different control methods. 
+        /// Because different control methods use different API's that may not always be available, 
+        /// CurvedUI needs to be recompile with different custom defines to fix this. This method 
+        /// manages the defines.
+        /// </summary>
+        /// <param name="defineToSet">Switcho.</param>
+        void DrawCustomDefineSwitcher(string defineToSet)
+        {
+            GUILayout.BeginVertical();
+            GUILayout.Label("Press the [Enable] button to recompile scripts for this control method. Afterwards, you'll see more settings here.", EditorStyles.helpBox);
 
-			GUILayout.BeginHorizontal();
-			GUILayout.Space(50);
-			if (GUILayout.Button(loadingCustomDefine ? "Please wait..." : "Enable."))
+            GUILayout.BeginHorizontal();
+            GUILayout.Space(50);
+            if (GUILayout.Button(loadingCustomDefine ? "Please wait..." : "Enable."))
             {
                 SwitchToDefine(defineToSet);
             }
-			GUILayout.EndHorizontal();
-			GUILayout.EndVertical();
+            GUILayout.EndHorizontal();
+            GUILayout.EndVertical();
         }
 
         private void SwitchToDefine(string defineToSet)
@@ -580,13 +586,13 @@ namespace CurvedUI {
                         str = str.Replace(define, "");
                 }
             }
-        
+
             //add this one, if not present.
             if (defineToSet != "" && !str.Contains(defineToSet))
                 str += ";" + defineToSet;
 
             //Submit defines. This will cause recompilation
-            PlayerSettings.SetScriptingDefineSymbolsForGroup(EditorUserBuildSettings.selectedBuildTargetGroup, str);       
+            PlayerSettings.SetScriptingDefineSymbolsForGroup(EditorUserBuildSettings.selectedBuildTargetGroup, str);
         }
 
         void Draw180DegreeWarning()
@@ -596,55 +602,64 @@ namespace CurvedUI {
             EditorGUILayout.HelpBox("Cavas with angle bigger than 180 degrees will not be interactable. \n" +
                 "This is caused by Unity Event System requirements. Use two canvases facing each other for fully interactive 360 degree UI.", MessageType.Warning);
             GUILayout.EndHorizontal();
-            GUILayout.Space(10); 
+            GUILayout.Space(10);
         }
-#endregion
+        #endregion
 
 
 
 
-#region HELPER FUNCTIONS
+        #region HELPER FUNCTIONS
         static List<string> layers;
         static string[] layerNames;
 
-        public static LayerMask LayerMaskField (string label, LayerMask selected)
+        public static LayerMask LayerMaskField(string label, LayerMask selected)
         {
-            if (layers == null) {
+            if (layers == null)
+            {
                 layers = new List<string>();
                 layerNames = new string[4];
-            } else {
-                layers.Clear ();
             }
-                     
+            else
+            {
+                layers.Clear();
+            }
+
             int emptyLayers = 0;
-            for (int i=0;i<32;i++) {
-                string layerName = LayerMask.LayerToName (i);
-                         
-                if (layerName != "") {
-                             
-                    for (;emptyLayers>0;emptyLayers--) layers.Add ("Layer "+(i-emptyLayers));
-                    layers.Add (layerName);
-                } else {
+            for (int i = 0; i < 32; i++)
+            {
+                string layerName = LayerMask.LayerToName(i);
+
+                if (layerName != "")
+                {
+
+                    for (; emptyLayers > 0; emptyLayers--) layers.Add("Layer " + (i - emptyLayers));
+                    layers.Add(layerName);
+                }
+                else
+                {
                     emptyLayers++;
                 }
             }
-                     
-            if (layerNames.Length != layers.Count) {
+
+            if (layerNames.Length != layers.Count)
+            {
                 layerNames = new string[layers.Count];
             }
-            for (int i=0;i<layerNames.Length;i++) layerNames[i] = layers[i];
-                 
-            selected.value =  EditorGUILayout.MaskField (label,selected.value,layerNames);
-                 
+            for (int i = 0; i < layerNames.Length; i++) layerNames[i] = layers[i];
+
+            selected.value = EditorGUILayout.MaskField(label, selected.value, layerNames);
+
             return selected;
         }
-        
+
         bool IsInLayerMask(int layer, LayerMask layermask)
         {
             return layermask == (layermask | (1 << layer));
         }
 
-        Dictionary<CurvedUIInputModule.CUIControlMethod, string> ControlMethodDefineDict {
+        Dictionary<CurvedUIInputModule.CUIControlMethod, string> ControlMethodDefineDict
+        {
             get
             {
                 if (m_controlMethodDefineDict == null)
@@ -659,9 +674,9 @@ namespace CurvedUI {
             }
         }
 
-             
 
-    void SwapEventSystem()
+
+        void SwapEventSystem()
         {
             if (Application.isPlaying)
             {
@@ -677,7 +692,7 @@ namespace CurvedUI {
                 var inst = tmpGO.AddComponent<CurvedUIEventSystem>();
                 var replacement = MonoScript.FromMonoBehaviour(inst);
                 DestroyImmediate(tmpGO);
-                
+
                 //swap serialized reference to CurvedUIEventSystem
                 var so = new SerializedObject(system);
                 var scriptProperty = so.FindProperty("m_Script");
@@ -685,7 +700,7 @@ namespace CurvedUI {
                 scriptProperty.objectReferenceValue = replacement;
                 so.ApplyModifiedProperties();
             }
-            
+
             CUIeventSystemPresent = true;
         }
 
@@ -700,12 +715,12 @@ namespace CurvedUI {
 
 
 
-		/// <summary>
-		/// Removes all CurvedUI components from this canvas.
-		/// </summary>
+        /// <summary>
+        /// Removes all CurvedUI components from this canvas.
+        /// </summary>
         private void RemoveCurvedUIComponents()
-   		{
-	        if (target == null) return;
+        {
+            if (target == null) return;
 
             //destroy TMP objects
             List<CurvedUITMP> tmps = new List<CurvedUITMP>();
@@ -724,45 +739,47 @@ namespace CurvedUI {
 
             //destroy curving componenets
             List<CurvedUIVertexEffect> comps = new List<CurvedUIVertexEffect>();
-	        comps.AddRange((target as CurvedUISettings).GetComponentsInChildren<CurvedUIVertexEffect>(true));
-	        for (int i = 0; i < comps.Count; i++)
-	        {
-	            if (comps[i].GetComponent<UnityEngine.UI.Graphic>() != null) comps[i].GetComponent<UnityEngine.UI.Graphic>().SetAllDirty();
-	            DestroyImmediate(comps[i]);            
-	        }
-  
+            comps.AddRange((target as CurvedUISettings).GetComponentsInChildren<CurvedUIVertexEffect>(true));
+            for (int i = 0; i < comps.Count; i++)
+            {
+                if (comps[i].GetComponent<UnityEngine.UI.Graphic>() != null) comps[i].GetComponent<UnityEngine.UI.Graphic>().SetAllDirty();
+                DestroyImmediate(comps[i]);
+            }
+
 
             //destroy raycasters
             List<CurvedUIRaycaster> raycasters = new List<CurvedUIRaycaster>();
-	        raycasters.AddRange((target as CurvedUISettings).GetComponents<CurvedUIRaycaster>());
-	        for (int i = 0; i < raycasters.Count; i++)
-	        {
-	            DestroyImmediate(raycasters[i]);
-	        }
+            raycasters.AddRange((target as CurvedUISettings).GetComponents<CurvedUIRaycaster>());
+            for (int i = 0; i < raycasters.Count; i++)
+            {
+                DestroyImmediate(raycasters[i]);
+            }
 
-	        DestroyImmediate(target);
-   		}
-#endregion
+            DestroyImmediate(target);
+        }
+        #endregion
 
-#region STRINGS
+        #region STRINGS
 #pragma warning disable 414
-    private static string WarningLayerNotIncluded = "This Canvas' layer " +
-                                                "is not included in the RaycastLayerMask. User will not be able to interact with it. " +
-                                                "Add its layer to RaycastLayerMask below to fix it, or set the " +
-                                                "Interactable property to False to dismiss this message.";
-    
-    private static string WarningInputModuleNotAccessible = "Some Global Settings are hidden. " +
-                                                            "These are saved on CurvedUIInputModule " +
-                                                            "and cannot be accessed right now.";
+        private static string WarningLayerNotIncluded = "This Canvas' layer " +
+                                                    "is not included in the RaycastLayerMask. User will not be able to interact with it. " +
+                                                    "Add its layer to RaycastLayerMask below to fix it, or set the " +
+                                                    "Interactable property to False to dismiss this message.";
 
-    private static string ErrorInputModuleMissing =
-        "CurvedUIInputModule not found on the Scene. Canvas will not be interactable.";
+        private static string WarningInputModuleNotAccessible = "Some Global Settings are hidden. " +
+                                                                "These are saved on CurvedUIInputModule " +
+                                                                "and cannot be accessed right now.";
+
+        private static string ErrorInputModuleMissing =
+            "CurvedUIInputModule not found on the Scene. Canvas will not be interactable.";
 
 
-    private static string WarningDisableUnityXR = "Enabling this control method will disable UNITY_XR support.";
+        private static string WarningDisableUnityXR = "Enabling this control method will disable UNITY_XR support.";
 #pragma warning restore 414
-    #endregion
+        #endregion
 
     }
 }
 
+
+#endif

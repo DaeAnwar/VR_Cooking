@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -32,7 +33,8 @@ namespace CurvedUI.ConditionalCompilation
     {
         const string k_EnableCCU = "UNITY_CCU";
 
-        public static bool enabled {
+        public static bool enabled
+        {
             get
             {
                 var buildTargetGroup = EditorUserBuildSettings.selectedBuildTargetGroup;
@@ -170,4 +172,5 @@ namespace CurvedUI.ConditionalCompilation
             return list;
         }
     }
-}
+} 
+#endif

@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 
 namespace CurvedUI
 {
@@ -10,7 +11,7 @@ namespace CurvedUI
     public class CurvedUIScriptOrder : Editor
     {
 
-      
+
 
         static CurvedUIScriptOrder()
         {
@@ -28,9 +29,9 @@ namespace CurvedUI
                 // If found our script
                 if (monoScript.name == scriptName)
                 {
-                    
 
-                    if(match == OrderMatch.EXACT)
+
+                    if (match == OrderMatch.EXACT)
                     {
                         // And it's not at the execution time we want already
                         if (MonoImporter.GetExecutionOrder(monoScript) != order)
@@ -72,3 +73,5 @@ namespace CurvedUI
     }
 }
 
+
+#endif

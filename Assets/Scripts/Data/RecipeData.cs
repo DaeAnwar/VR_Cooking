@@ -2,172 +2,115 @@ using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 [System.Serializable]
 public class Ingredient
-    {
-        [JsonProperty("name")]
-        public string name ;
+{
 
-        [JsonProperty("servingSize")]
-        public ServingSize servingSize ;
-    }
+    public string Name;
+    
+
+
+
+}
 [System.Serializable]
 public class Nutrients
-    {
-        [JsonProperty("caloriesKCal")]
-        public double caloriesKCal ;
+{
+    
+    public string Name;
+    public double Value;
 
-       
-        [JsonProperty("totalCarbs")]
-        public double totalCarbs ;
 
-       
 
-        [JsonProperty("diabetesCarbs")]
-        public double diabetesCarbs ;
+}
+[System.Serializable]
+public class Infos
+{
 
-      
-        [JsonProperty("sugar")]
-        public double sugar ;
+    public string information;
 
-      
-        [JsonProperty("protein")]
-        public double protein ;
 
-        [JsonProperty("fat")]
-        public double fat ;
 
-      
-        [JsonProperty("potassium")]
-        public double potassium ;
-
-        [JsonProperty("magnesium")]
-        public double magnesium ;
-
-        [JsonProperty("calcium")]
-        public double calcium ;
-
-        [JsonProperty("iron")]
-        public double iron ;
-
-        [JsonProperty("zinc")]
-        public double zinc ;
-
-        [JsonProperty("copper")]
-        public double copper ;
-
-        [JsonProperty("phosphorus")]
-        public double phosphorus ;
-
-        [JsonProperty("sodium")]
-        public double sodium ;
-
-        [JsonProperty("selenium")]
-        public double selenium ;
-
-        [JsonProperty("folate")]
-        public double folate ;
-
-        [JsonProperty("choline")]
-        public double choline ;
-
-        [JsonProperty("alcohol")]
-        public double alcohol ;
-
-        [JsonProperty("caffeine")]
-        public double caffeine ;
-
-        [JsonProperty("gluten")]
-        public double gluten ;
-
-        [JsonProperty("manganese")]
-        public double manganese ;
-
-    }
+}
 
 [System.Serializable]
-    public class RecipeData
-    {
-        [JsonProperty("id")]
-        public string id ;
+public class RecipeData
+{
 
-    [TextArea(1,2)]
-    [JsonProperty("name")]
-        public string name ;
+    public string id;
 
-        [JsonProperty("tags")]
-        public List<string> tags ;
+    [TextArea(1, 2)]
+
+    public string name;
+
+
+    public List<string> tags;
     [TextArea(2, 10)]
-    [JsonProperty("description")]
-        public string description ;
 
-        [JsonProperty("prepareTime")]
-        public double prepareTime ;
+    public string description;
 
-        [JsonProperty("cookTime")]
-        public double cookTime ;
 
-        [JsonProperty("ingredients")]
-        public List<Ingredient> ingredients ;
+    public double prepareTime;
 
-        [JsonProperty("steps")]
-        public List<string> steps ;
 
-        [JsonProperty("servings")]
-        public double servings ;
+    public double cookTime;
 
-        [JsonProperty("servingSizes")]
-        public List<ServingSize> servingSizes ;
 
-        [JsonProperty("nutrients")]
-        public Nutrients nutrients ;
+    public List<Ingredient> Ingredients;
 
-        [JsonProperty("image")]
-        public string image ;
-    }
+
+
+
+    public List<Steps> steps;
+
+     public List<Tool> tools;
+
+    public List<Nutrients> nutrients;
+
+    public List<Infos> Infos;
+    public string image;
+}
 
 [System.Serializable]
-public class ServingSize
-    {
-        [JsonProperty("units")]
-        public string units ;
+public class Steps
+{
+    public string StepDescription;
+    public StepAction action;
 
-        [JsonProperty("desc")]
-        public string desc ;
+    public GameObject IngredientClone;
+     [HideInInspector] public StepController StepPrefab;
+    public int IngredientsCounting;
+   
+    public float timer;  
 
-        [JsonProperty("qty")]
-        public double qty ;
+    public string Outcome; 
+    
+    
+}
+[System.Serializable]
+public class Tool
+{
+    [SerializeField] public string toolname;
+    public ToolDetails toolDetails;  
+    
+}
+[System.Serializable]
+public class ToolDetails
+{
 
-        [JsonProperty("grams")]
-        public double grams ;
+    [SerializeField] public ToolInteractionDetector toolClone;
+    [SerializeField] public int ToolId;
+    
 
-        [JsonProperty("scale")]
-        public double scale ;
-    }
+}
 
 [System.Serializable]
-public class ServingSize2
-    {
-        [JsonProperty("scale")]
-        public double scale ;
+public class StepAction
+{
+    public string Ingredient;
+    public int ToolIndex;
+    public string IngredientOutcome; 
+     
 
-        [JsonProperty("qty")]
-        public double qty ;
-
-        [JsonProperty("grams")]
-        public double grams ;
-
-        [JsonProperty("units")]
-        public string units ;
-
-        [JsonProperty("originalWeight")]
-        public double originalWeight ;
-
-       
-    }
-
-
-
-
-
+}

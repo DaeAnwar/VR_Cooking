@@ -6,31 +6,31 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 51080c575151590f090a5a2142220c44434e482f747e7765297b4863b2b4623a
-      flags: 0
-    RecentlyUsedSceneGuid-1:
-      value: 075205575c510b095f5a0f7049705d44404e4e7f7b792268747a4961e3b5326d
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 52080d040151585a55080e7041775c441316407e7d792565782b4e60e3e26d6d
-      flags: 0
-    RecentlyUsedSceneGuid-3:
-      value: 530757505c56505f5c575d7442735c4417154878757025367c7f4b36bae1606b
-      flags: 0
-    RecentlyUsedSceneGuid-4:
       value: 52000c0706055b58545a0f7b11750a444116197a7e7925317c28456ae0b13039
       flags: 0
+    RecentlyUsedSceneGuid-1:
+      value: 55040c51030d505d5d080921167308444e4f1b2b797e27347d7a456abab96c61
+      flags: 0
+    RecentlyUsedSceneGuid-2:
+      value: 5252570552515e590c5a097612775b1541151a7a2a7d77697b7e1961e4b56d3d
+      flags: 0
+    RecentlyUsedSceneGuid-3:
+      value: 055057075701585a090a5b24497a5c44434e1e7f7870206929781865e1e1676d
+      flags: 0
+    RecentlyUsedSceneGuid-4:
+      value: 50020d5704005c03555c5a2147740d44444e4d7f2f2a27657b7b4b67e7b8626c
+      flags: 0
     RecentlyUsedSceneGuid-5:
-      value: 56070c0307570c0a5d085a2047735d44401649297d787063782f4864e0b1656a
+      value: 530757505c56505f5c575d7442735c4417154878757025367c7f4b36bae1606b
       flags: 0
     RecentlyUsedSceneGuid-6:
-      value: 0600070051510d585b56592412200644134f4e737d297331287e4830e7b03161
+      value: 550506005402580a09080f7044750b44144e412c2a2c7462787c4f66b3b8366a
       flags: 0
     RecentlyUsedSceneGuid-7:
-      value: 060556025c500b5f0f0f0d2042720f444e4f49787f792266292d4b66e7b06d6f
+      value: 0153500754510b5f5f5f542747750b4445154928287e20337e2d1b31b1b16439
       flags: 0
     RecentlyUsedSceneGuid-8:
-      value: 50020d5704005c03555c5a2147740d44444e4d7f2f2a27657b7b4b67e7b8626c
+      value: 52080d040151585a55080e7041775c441316407e7d792565782b4e60e3e26d6d
       flags: 0
     RecentlyUsedSceneGuid-9:
       value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
@@ -53,4 +53,3 @@ EditorUserSettings:
   m_VCOtherOverlayIcons: 1
   m_VCAllowAsyncUpdate: 1
   m_ArtifactGarbageCollection: 1
-  m_CompressAssetsOnImport: 1

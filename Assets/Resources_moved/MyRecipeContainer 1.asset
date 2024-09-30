@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c7b4cf20c542e4db37bee9dc0fada8, type: 3}
+  m_Name: MyRecipeContainer 1
+  m_EditorClassIdentifier: 
+  recipes:
+  - id: 1
+    name: Simple Omelette
+    tags: []
+    description: This easy omelette recipe requires only two ingredients and minimal
+      preparation. Perfect for a quick and satisfying meal!
+    prepareTime: 1
+    cookTime: 2
+    Ingredients:
+    - Name: Egg
+    - Name: Salt
+    - Name: Lemon
+    - Name: Egg
+    steps:
+    - StepDescription: Put the  Egg in the bowl
+      action:
+        Ingredient: Egg
+        ToolIndex: 0
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      Outcome: 
+    - StepDescription: Put the  Egg in the Pan
+      action:
+        Ingredient: Egg
+        ToolIndex: 1
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      Outcome: 
+    - StepDescription: Put the Salt in the Bowl
+      action:
+        Ingredient: Salt
+        ToolIndex: 0
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      Outcome: Apple
+    - StepDescription: Put the Apple  in the Dish
+      action:
+        Ingredient: 
+        ToolIndex: 2
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      Outcome: 
+    - StepDescription: Put lemon in the Bowla
+      action:
+        Ingredient: Lemon
+        ToolIndex: 3
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      Outcome: 
+    tools:
+    - toolname: Bowl
+      toolDetails:
+        toolClone: {fileID: 0}
+        ToolId: 0
+    - toolname: Pan
+      toolDetails:
+        toolClone: {fileID: 0}
+        ToolId: 1
+    - toolname: Dish
+      toolDetails:
+        toolClone: {fileID: 0}
+        ToolId: 2
+    - toolname: Bowla
+      toolDetails:
+        toolClone: {fileID: 0}
+        ToolId: 3
+    nutrients:
+      caloriesKCal: 0
+      totalCarbs: 0
+      diabetesCarbs: 0
+      sugar: 0
+      protein: 0
+      fat: 0
+      potassium: 0
+      magnesium: 0
+      calcium: 0
+      iron: 0
+      zinc: 0
+      copper: 0
+      phosphorus: 0
+      sodium: 0
+      selenium: 0
+      folate: 0
+      choline: 0
+      alcohol: 0
+      caffeine: 0
+      gluten: 0
+      manganese: 0
+    image: https://t4.ftcdn.net/jpg/00/72/63/11/360_F_72631197_tpGbcN6nWEhwCiHF1nxk4Qbv5kRiUUPD.jpg

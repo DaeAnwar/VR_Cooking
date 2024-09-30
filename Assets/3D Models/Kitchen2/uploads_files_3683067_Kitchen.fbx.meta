@@ -1,0 +1,312 @@
+fileFormatVersion: 2
+guid: 922af11a006add44ba344298f73947c2
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CoffeeMachineBlack
+    second: {fileID: 2100000, guid: 734d264dd36327e419f055469d97b58a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CoffeeMachineBlackScratchy
+    second: {fileID: 2100000, guid: 56f379ae9985fa1478355cdc943efe19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CoffeeMachineGlass
+    second: {fileID: 2100000, guid: 2541fdf687f4d0e47a07577d689969c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CoffeeMachineMat
+    second: {fileID: 2100000, guid: decd66de8052031409e3e644054ae9de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CoffeeMachineMat.001
+    second: {fileID: 2100000, guid: 00f061b05a7d3984aa2f605bee21424a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CoffeeMachineMetal
+    second: {fileID: 2100000, guid: e27558f13fa9d89408eede511bb64ec8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CoffeeMat
+    second: {fileID: 2100000, guid: 57bea3976a4e9a644a132e8f201b59b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CounterTop
+    second: {fileID: 2100000, guid: 40ccc7f024f27a842b0183582a56a88d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkWood
+    second: {fileID: 2100000, guid: eb1c90697cc85af42b1ef0137c8204f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DrawerHandle
+    second: {fileID: 2100000, guid: 47ffc750bd54f674280391560d1bdae3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Drawers
+    second: {fileID: 2100000, guid: a518e35d9611936489143a146c8f6cbb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Drawers.001
+    second: {fileID: 2100000, guid: bfac062d8a52bf94087fec75c1026abd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 33daf1c00bdf0704db8526bd64bfaf8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FrdigeMat
+    second: {fileID: 2100000, guid: 4fa9925ff3531af419fa4915ec906ec6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 1aa7fc9575f828d4ca0a2c50fae2f080, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KnobMetal
+    second: {fileID: 2100000, guid: f8422af242d1fba40825154a4ef75ac8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LampMat
+    second: {fileID: 2100000, guid: af032abb210d52947b8aa097443d836e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaves
+    second: {fileID: 2100000, guid: f7e228dde4b17f442aff7786ab84f555, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: b8398d8897f64d7439f5bab71663b4fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: a1436651566792944b4db7b60a679a85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: df9e2988ba117ed48b7d3743f9cb8899, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Net
+    second: {fileID: 2100000, guid: 558b9a8ab102cbc41a59beff854a90fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OvenGlass
+    second: {fileID: 2100000, guid: 998bcadac9afe9d48a602eecc19d2ac6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OvenMat
+    second: {fileID: 2100000, guid: fe807ed17b680c14fb0941033bff27b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paper
+    second: {fileID: 2100000, guid: 939f0f9531136b84f872f8be4f300dc3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plant
+    second: {fileID: 2100000, guid: aa0fe6b850f23e944b2e6b7044400661, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic
+    second: {fileID: 2100000, guid: 4a721d51a3c4eb14b9f28e78d2f272d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pot
+    second: {fileID: 2100000, guid: 315cb58b83698924087c8342d1150c9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RedLight
+    second: {fileID: 2100000, guid: 06ab73f23325f484ebea728d30634f1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SinkMetal
+    second: {fileID: 2100000, guid: b44fa51a4482aa24e999a5f535de5fd5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToasterBlack
+    second: {fileID: 2100000, guid: 25359a0ed8ec7b4438b58a3c283e13f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToasterBlack.001
+    second: {fileID: 2100000, guid: 522f86bedf60e1143964ab255eb26798, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToasterKnob
+    second: {fileID: 2100000, guid: fceab14ca75a99e478ca13e35477ea2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToasterKnob.001
+    second: {fileID: 2100000, guid: 4c79300817b1b8043bc8f3fb728dcf9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToasterMetal
+    second: {fileID: 2100000, guid: 2b24cd0d9f65f1b45884d01df7dd6bc9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToasterPlastic
+    second: {fileID: 2100000, guid: c10f5ee04b9634a4fb629bd20a8d1cd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TubeMat
+    second: {fileID: 2100000, guid: 560af3db1e2b4f64aa86552af0c34cf6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall
+    second: {fileID: 2100000, guid: 61d55aead8595f7429298486bc760d34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: fa1832ecda7b8c548a630bdc4e96d1c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: apple
+    second: {fileID: 2100000, guid: e58c100fc62289f46adaf6dd9000ae3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: apple02
+    second: {fileID: 2100000, guid: d11fa616a3439f940b881d8c81483a47, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 2
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

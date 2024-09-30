@@ -1,0 +1,372 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c7b4cf20c542e4db37bee9dc0fada8, type: 3}
+  m_Name: RecipeContainer 1
+  m_EditorClassIdentifier: 
+  recipes:
+  - id: 0
+    name: Simple Omelette
+    tags: []
+    description: This easy omelette recipe requires only two ingredients and minimal
+      preparation. Perfect for a quick and satisfying meal!
+    prepareTime: 8
+    cookTime: 5
+    Ingredients:
+    - Name: Egg
+    - Name: Lettuce
+    - Name: Tomato
+    - Name: Break
+    - Name: Meal
+    - Name: Onion
+    - Name: Meal
+    steps:
+    - StepDescription: Put 3 Eggs  in the bowl
+      action:
+        Ingredient: Egg
+        ToolIndex: 0
+        IngredientOutcome: 
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 3
+      timer: 0
+      Outcome: 
+    - StepDescription: Put the  Onion  in the bowl
+      action:
+        Ingredient: Onion
+        ToolIndex: 0
+        IngredientOutcome: 
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 2
+      Outcome: Omlette Recette
+    - StepDescription: Pour the Bowl's Mixed outcome into the Pan
+      action:
+        Ingredient: None
+        ToolIndex: 1
+        IngredientOutcome: Omlette Recette
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 3
+      Outcome: Omlette
+    - StepDescription: 'Put the omlette on the Right main dish '
+      action:
+        Ingredient: None
+        ToolIndex: 4
+        IngredientOutcome: Omlette
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 0
+      Outcome: 
+    - StepDescription: Put to Meal on the Toaster machine
+      action:
+        Ingredient: Roast
+        ToolIndex: 5
+        IngredientOutcome: 
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 2
+      Outcome: Patty
+    - StepDescription: Take the Baked meal to the chopping to cut it
+      action:
+        Ingredient: None
+        ToolIndex: 3
+        IngredientOutcome: Patty
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 3
+      Outcome: Bacon_Slice
+    - StepDescription: 'Put the Meal slices to the cooking dish  '
+      action:
+        Ingredient: None
+        ToolIndex: 2
+        IngredientOutcome: Bacon_Slice
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 0
+      Outcome: 
+    - StepDescription: Cut the Bread on the Chopping
+      action:
+        Ingredient: Bread
+        ToolIndex: 3
+        IngredientOutcome: 
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 3
+      Outcome: Bread_Slice
+    - StepDescription: Bake the Bread slice on the toaster machine
+      action:
+        Ingredient: None
+        ToolIndex: 5
+        IngredientOutcome: Bread_Slice
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 2
+      Outcome: Toast
+    - StepDescription: Put the cooked toast to in cooking dish
+      action:
+        Ingredient: None
+        ToolIndex: 2
+        IngredientOutcome: Toast
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 0
+      Outcome: 
+    - StepDescription: Cut the Tomato on the Chopper
+      action:
+        Ingredient: Tomato
+        ToolIndex: 3
+        IngredientOutcome: 
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 3
+      Outcome: Tomato_Slice
+    - StepDescription: Put the Tomato Slices in the cooking dish
+      action:
+        Ingredient: None
+        ToolIndex: 2
+        IngredientOutcome: Tomato_Slice
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 0
+      Outcome: 
+    - StepDescription: Put the Lettuce in the cooking dish
+      action:
+        Ingredient: Lettuce
+        ToolIndex: 2
+        IngredientOutcome: 
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 0
+      Outcome: 
+    - StepDescription: Put the Cheese in the cooking dish
+      action:
+        Ingredient: Cheese
+        ToolIndex: 2
+        IngredientOutcome: 
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 2
+      Outcome: BakedToast
+    - StepDescription: Serve the Toast and put it on the Left Main Dish
+      action:
+        Ingredient: None
+        ToolIndex: 6
+        IngredientOutcome: BakedToast
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 0
+      Outcome: 
+    tools:
+    - toolname: Bowl
+      toolDetails:
+        toolClone: {fileID: 0}
+        ToolId: 0
+    - toolname: Pan
+      toolDetails:
+        toolClone: {fileID: 0}
+        ToolId: 1
+    - toolname: Dish
+      toolDetails:
+        toolClone: {fileID: 0}
+        ToolId: 2
+    - toolname: Chopping
+      toolDetails:
+        toolClone: {fileID: 0}
+        ToolId: 3
+    - toolname: MainDishRight
+      toolDetails:
+        toolClone: {fileID: 0}
+        ToolId: 4
+    - toolname: Toaster Machine
+      toolDetails:
+        toolClone: {fileID: 0}
+        ToolId: 5
+    - toolname: MainDishLeft
+      toolDetails:
+        toolClone: {fileID: 0}
+        ToolId: 6
+    nutrients:
+    - Name: caloriesKCal
+      Value: 460
+    - Name: totalCarbs/G
+      Value: 34
+    - Name: diabetesCarbs/G
+      Value: 32
+    - Name: sugar/G
+      Value: 8
+    - Name: protein/G
+      Value: 30
+    - Name: potassium/MG
+      Value: 480
+    - Name: magnesium/MG
+      Value: 45
+    - Name: calcium/MG
+      Value: 260
+    - Name: iron/Mg
+      Value: 4
+    - Name: zinc/Mg
+      Value: 2.5
+    - Name: phosphorus/Mg
+      Value: 400
+    - Name: zinc/Mg
+      Value: 2.5
+    - Name: sodium/Mg
+      Value: 610
+    - Name: folate/Mcg
+      Value: 130
+    - Name: choline/Mcg
+      Value: 47
+    - Name: alcohol
+      Value: 0
+    - Name: caffeine
+      Value: 0
+    - Name: gluten
+      Value: 0
+    - Name: manganese/Mg
+      Value: 0.6
+    Infos:
+    - information: Eggs are a powerhouse of nutrients, rich in high-quality protein
+        and essential amino acids. They are an excellent source of selenium, vitamin
+        D, B6, B12, and minerals such as zinc, iron, and copper. The choline in eggs
+        supports brain health, and their vitamin A content is beneficial for vision
+        and immune function.
+    - information: Onions add flavor with minimal calories. They are a good source
+        of vitamin C, B vitamins, and potassium. Onions also contain antioxidants
+        and sulfur-containing compounds that have been linked to various health benefits,
+        including reduced risk of cancer and lower blood sugar levels.
+    - information: Cheese is a concentrated source of calcium, which is essential
+        for bone health. It also provides protein and fat. Depending on the type
+        of cheese, it can be rich in vitamins A and B12, along with zinc, phosphorus,
+        and riboflavin. Moderate consumption supports strong bones and teeth.
+    - information: 'Bread, Lettuce, and Tomato: Whole grain bread offers fiber, B
+        vitamins, and iron. Lettuce, especially dark leafy varieties, is low in calories
+        but high in vitamins A, C, and K, along with folate and manganese. Tomatoes
+        are packed with vitamins C and K, potassium, and the antioxidant lycopene,
+        which is linked to heart health and reduced cancer risk.'
+    image: https://t4.ftcdn.net/jpg/00/72/63/11/360_F_72631197_tpGbcN6nWEhwCiHF1nxk4Qbv5kRiUUPD.jpg
+  - id: 1
+    name: 'Testing Simple Omelette '
+    tags: []
+    description: This easy omelette recipe requires only two ingredients and minimal
+      preparation. Perfect for a quick and satisfying meal!
+    prepareTime: 8
+    cookTime: 2
+    Ingredients:
+    - Name: Egg
+    - Name: Lettuce
+    - Name: Tomato
+    - Name: Break
+    - Name: Meal
+    - Name: Onion
+    - Name: Meal
+    steps:
+    - StepDescription: Put 3 Eggs  in the bowl
+      action:
+        Ingredient: Egg
+        ToolIndex: 0
+        IngredientOutcome: 
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 1
+      Outcome: Omlette Recette
+    - StepDescription: Pour the Bowl's Mixed outcome into the Pan
+      action:
+        Ingredient: None
+        ToolIndex: 1
+        IngredientOutcome: Omlette Recette
+      IngredientClone: {fileID: 0}
+      StepPrefab: {fileID: 0}
+      IngredientsCounting: 1
+      timer: 0
+      Outcome: 
+    tools:
+    - toolname: Bowl
+      toolDetails:
+        toolClone: {fileID: 0}
+        ToolId: 0
+    - toolname: MainDishRight
+      toolDetails:
+        toolClone: {fileID: 0}
+        ToolId: 1
+    nutrients:
+    - Name: caloriesKCal
+      Value: 5000
+    - Name: totalCarbs
+      Value: 0
+    - Name: diabetesCarbs
+      Value: 0
+    - Name: sugar
+      Value: 0
+    - Name: protein
+      Value: 0
+    - Name: potassium
+      Value: 0
+    - Name: magnesium
+      Value: 0
+    - Name: calcium
+      Value: 0
+    - Name: iron
+      Value: 0
+    - Name: zinc
+      Value: 0
+    - Name: copper
+      Value: 0
+    - Name: phosphorus
+      Value: 0
+    - Name: zinc
+      Value: 0
+    - Name: sodium
+      Value: 0
+    - Name: selenium
+      Value: 0
+    - Name: folate
+      Value: 0
+    - Name: choline
+      Value: 0
+    - Name: alcohol
+      Value: 0
+    - Name: caffeine
+      Value: 0
+    - Name: alcohol
+      Value: 0
+    - Name: gluten
+      Value: 0
+    - Name: manganese
+      Value: 0
+    Infos:
+    - information: sdqsdsqdsqdsq dsqdqd dsqdsqdsqdsdqsdsqdsqdsq dsqdqd dsqdsqdsqdsdqsdsqdsqdsq
+        dsqdqd dsqdsqdsqdsdqsdsqdsqdsq dsqdqd dsqdsqdsqdsdqsdsqdsqdsq dsqdqd dsqdsqdsqdsdqsdsqdsqdsq
+        dsqdqd dsqdsqdsqdsdqsdsqdsqdsq dsqdqd dsqdsqdsqdsdqsdsqdsqdsq dsqdqd dsqdsqdsqdsdqsdsqdsqdsq
+        dsqdqd dsqdsqdsqdsdqsdsqdsqdsq dsqdqd dsqdsqdsqddsqdsqdqsdqsdsqdqsddddddddddddddqsdsqdsqdsqdsqdqsdsqdqsdsq
+    - information: pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+    - information: ccc ccc cc cccccc ccc cc cccccc ccc cc cccccc ccc cc cccccc ccc
+        cc cccccc ccc cc cccccc ccc cc cccccc ccc cc cccccc ccc cc cccccc ccc cc
+        ccc
+    - information: ssssssssssssss ssss sssssssssssssssssss ssss sssssssssssssssssss
+        ssss sssssssssssssssssss ssss sssssssssssssssssss ssss sssssssssssssssssss
+        ssss sssssssssssssssssss ssss sssss
+    image: https://t4.ftcdn.net/jpg/00/72/63/11/360_F_72631197_tpGbcN6nWEhwCiHF1nxk4Qbv5kRiUUPD.jpg

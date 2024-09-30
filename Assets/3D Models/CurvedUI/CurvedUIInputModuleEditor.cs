@@ -1,14 +1,17 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.UI;
 
 
-namespace CurvedUI { 
+namespace CurvedUI
+{
 
-	[CustomEditor(typeof(CurvedUIInputModule))]
-	public class CurvedUIInputModuleEditor : Editor {
+    [CustomEditor(typeof(CurvedUIInputModule))]
+    public class CurvedUIInputModuleEditor : Editor
+    {
 
         bool opened = false;
 
@@ -43,7 +46,7 @@ namespace CurvedUI {
 
 
         public override void OnInspectorGUI()
-		{
+        {
             EditorGUILayout.HelpBox("Use CurvedUISettings component on your Canvas to configure CurvedUI", MessageType.Info);
 
 
@@ -66,9 +69,11 @@ namespace CurvedUI {
                         opened = !opened;
                 }
             }
-       
+
             GUILayout.Space(20);
         }
-	}
+    }
 
 }
+
+#endif

@@ -1,12 +1,21 @@
-using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
+
+using UnityEngine.AddressableAssets;
+
+using System.Threading.Tasks;
 
 public class RecipeStepsViewer : MonoBehaviour
 {
     [SerializeField] GameObject StepsPanel;
-    [SerializeField] RectTransform StepsHolder;
-    [SerializeField] StepController StepPrefab;
+    [SerializeField] GameManager gameManager;
+    [SerializeField] RecipeIngridentLoader RecipeIngrident;
+    public List<ToolInteractionDetector> InstantiatedTools;
+    private VfxHandler VfxOutcome;
+
+    public RecipeData itemData;
+
 
 
     private void OnEnable()
@@ -23,34 +32,63 @@ public class RecipeStepsViewer : MonoBehaviour
         StepsPanel.SetActive(false);
     }
 
-    private void HandleRecipeStepView(RecipeData data)
+    private async void HandleRecipeStepView(RecipeData data)
     {
+
         Debug.Log($"Handling recipe steps view for {data.name}");
+
         if (data != null)
         {
+            itemData = data;
             Debug.Log("Handling recipe steps view");
             Debug.Log($"Number of steps: {data.steps.Count}");
 
-            foreach (string step in data.steps)
+            // Loading Tool
+            foreach (Tool tool in data.tools)
             {
-                var stepClone = Instantiate(StepPrefab, StepsHolder);
-                
 
-                if (stepClone != null)
-                {
-                    stepClone.SetStep(step);
-                }
-                else
-                {
-                    Debug.LogError("StepController component not found on the instantiated prefab.");
-                }
+               await HandleToolLoadComplete(tool);
+
+                tool.toolDetails.toolClone.listOfThisToolSteps = new List<Steps>();
+                InstantiatedTools.Add(tool.toolDetails.toolClone);
+
             }
+            EventManager.OnRequestIngridents?.Invoke(itemData);
 
-            StepsPanel.SetActive(true);
+
         }
+
         else
         {
             Debug.LogWarning("RecipeData is null.");
         }
+
+        StepsPanel.SetActive(true);
     }
+
+
+    public async Task HandleToolLoadComplete(Tool toolD)
+    {
+        var handle = await Addressables.InstantiateAsync(toolD.toolname).Task;
+
+        // Wait for the operation to complete
+         
+        if (handle!=null)
+        {
+            Debug.Log("Loaded Tool: " + handle);
+            
+            ToolInteractionDetector toolPrefab = handle.AddComponent<ToolInteractionDetector>();
+            toolPrefab.SetGameManager(gameManager);
+            toolPrefab.SetRecipeIngridentLoader(RecipeIngrident);
+            
+
+            toolD.toolDetails.toolClone = toolPrefab; 
+        }
+        else
+        {
+            Debug.Log("Error loading Tool: " + toolD.toolname);
+        }
+      
+    }
+
 }

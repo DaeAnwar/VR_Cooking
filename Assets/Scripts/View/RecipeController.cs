@@ -13,10 +13,15 @@ public class RecipeController : MonoBehaviour
     public Text preparationTimeText;
     [Space]
     public RectTransform loadingEffect;
-
+    public GameObject PlayedIt; 
 
     private RecipeData itemData;
 
+    public void YouPlayedIt()
+    {
+        PlayedIt.SetActive(true);
+
+    }
     public void SetData(RecipeData data)
     {
         itemData = data;
@@ -42,6 +47,9 @@ public class RecipeController : MonoBehaviour
     public void ShowRecipeDetaills()
     {
         EventManager.OnRequestDetails?.Invoke(itemData);
+        GameManager.Instance.SetCurrentRecipe(this);
+        GameManager.Instance.PlayAnimationAndAudio(2);
+
     }
    
 
